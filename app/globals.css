@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-warm-white: #f7f3ec;
+  --color-sand: #e3d5be;
+  --color-olive: #6e7050;
+  --color-forest: #28331f;
+  --color-charcoal: #2a2a25;
+  --color-ink: #15150f;
+
+  --font-serif: var(--font-newsreader);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-olive);
+  outline-offset: 3px;
+}
+
+body {
+  background-color: var(--color-warm-white);
+  color: var(--color-charcoal);
+  font-weight: 300;
+}

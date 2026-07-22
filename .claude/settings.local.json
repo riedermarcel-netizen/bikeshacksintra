@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -rn \"^\\\\s*motion$\\\\|motion$\" components/Hero.js components/Journey.js components/About.js components/Pillars.js components/WhoItsFor.js)",
+      "Bash(lsof -i :3000 -sTCP:LISTEN -n -P)",
+      "Bash(kill -9 28183)",
+      "Bash(kill -9 35251)",
+      "Bash(cp \"Originals/74 - sophie_marcel_©estherjoergensen-83.jpg\" \"site/journey-ride-calmly.jpg\")",
+      "Bash(cp \"Originals/270 - sophie_marcel_©estherjoergensen-279.jpg\" \"site/journey-ride-confidently.jpg\")",
+      "Bash(cp \"Originals/210 - sophie_marcel_©estherjoergensen-220.jpg\" \"site/journey-ride-naturally.jpg\")",
+      "Bash(cp \"Originals/146 - sophie_marcel_©estherjoergensen-155.jpg\" \"site/journey-ride-playfully.jpg\")",
+      "Bash(npm run *)"
+    ]
+  }
+}
