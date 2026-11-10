@@ -77,60 +77,30 @@ export default function Book() {
   }
 
   return (
-    <section id="book" className="bg-paper text-ink py-24 md:py-32">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-10">
-        <p className="font-display text-[15px] tracking-[0.36em] uppercase text-earth mb-4">Request</p>
-        <h2 className="font-display font-medium uppercase text-[40px] md:text-[56px] leading-[1.02] max-w-[760px]">
-          Send a request
-        </h2>
-        <p className="text-[17px] text-stone mt-5 max-w-[520px]">
-          Tell us what you&apos;re interested in and when you&apos;d like to come.
-          Marcel will get back to you personally within a day or two.
-        </p>
-
-        <div className="mt-10 max-w-[520px] pt-5 border-t border-ink/15 text-[15px] text-stone flex flex-col gap-1.5">
-          <p><span className="font-semibold text-ink">Sintra Retreat</span> — 6 nights, €2,390 per rider</p>
-          <p><span className="font-semibold text-ink">Private day ride</span> — €250 per rider · two riders €450 · three riders €600</p>
+    <section id="book" className="bg-ink text-paper py-24 md:py-32">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.8fr_1.2fr]">
+        <div className="flex flex-col gap-6 md:sticky md:top-32 self-start">
+          <p className="font-display text-[15px] tracking-[0.36em] uppercase text-dim">Request</p>
+          <h2 className="font-display font-medium uppercase text-[44px] md:text-[56px] leading-[1.02]">
+            Send a request
+          </h2>
+          <p className="text-[17px] leading-[1.7] text-mist max-w-[420px]">
+            Tell us what you&apos;re interested in and when you&apos;d like to
+            come. Marcel will get back to you personally within a day or two.
+          </p>
+          <div className="flex flex-col gap-2 pt-4 text-[15px]">
+            <span className="text-dim">Prefer to write directly?</span>
+            <a href={`mailto:${contact.email}`} className="underline underline-offset-4 hover:opacity-80">{contact.email}</a>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">WhatsApp</a>
+          </div>
+          {paymentResult === "cancelled" && (
+            <p className="text-[13px] text-dim max-w-[420px]">
+              Payment wasn&apos;t completed, but your request still stands.
+            </p>
+          )}
         </div>
 
-        {paymentResult === "cancelled" && (
-          <p className="text-[13px] opacity-55 mt-6 max-w-[440px]">
-            Payment wasn&apos;t completed, but that&apos;s no problem: your
-            request still stands. You can secure your date with a deposit
-            anytime once Marcel confirms.
-          </p>
-        )}
-
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 mt-20">
-          <div className="flex flex-col border-t border-charcoal/30">
-            <a
-              href={`mailto:${contact.email}`}
-              className="flex items-center justify-between py-6 border-b border-charcoal/30 group"
-            >
-              <div>
-                <div className={labelClass}>Email</div>
-                <div className="font-display text-[22px]">{contact.email}</div>
-              </div>
-              <span className="text-[18px] opacity-55 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all">
-                →
-              </span>
-            </a>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between py-6 border-b border-charcoal/30 group"
-            >
-              <div>
-                <div className={labelClass}>WhatsApp</div>
-                <div className="font-display text-[22px]">Write us on WhatsApp</div>
-              </div>
-              <span className="text-[18px] opacity-55 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all">
-                →
-              </span>
-            </a>
-          </div>
-
+        <div className="bg-paper text-ink p-6 md:p-10">
           {paymentResult === "success" ? (
             <div>
               <p className="font-serif italic text-[20px] opacity-90">
