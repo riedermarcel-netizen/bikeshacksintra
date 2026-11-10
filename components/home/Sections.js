@@ -146,27 +146,24 @@ const offers = [
   {
     brand: "Bike Shack Sintra",
     title: "Day rides in Sintra",
-    text: "A private day on the best trails of the Serra, paced to how you ride. From €250 per rider.",
-    cta: "Plan a day →",
-    href: "#book",
+    text: "A guided day on the trails of the Serra de Sintra, for one rider or a small group.",
+    fact: "From €250 per rider",
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",
   },
   {
     brand: "Bike Shack Portugal",
     title: "Gravel Portugal",
-    text: "Five to ten days across Portugal by gravel bike, run together with 808 Project.",
-    cta: "Ask about the trips →",
-    href: "#book",
+    text: "Gravel trips across Portugal, organised together with 808 Project.",
+    fact: "5–10 days",
     img: "/images/v2/gravel-road.jpg",
     alt: "A rider on a long gravel road between green verges",
   },
   {
-    brand: "Bike Shack Sintra · Bike Shack Alps",
+    brand: "Bike Shack",
     title: "Team events",
-    text: "A riding day or several for your company or club, with guiding, food and transfers organised. On request.",
-    cta: "Ask us →",
-    href: "#book",
+    text: "Riding days for companies and clubs, in Sintra or the Alps.",
+    fact: "On request",
     img: "/images/v2/groups.jpg",
     alt: "Marcel leading a group of riders along a singletrack through a pine forest",
     position: "55% center",
@@ -183,12 +180,15 @@ export function Offers() {
         </div>
         <div className="grid gap-10 md:grid-cols-3">
           {offers.map((o) => (
-            <Reveal key={o.title} className="flex flex-col gap-4">
+            <Reveal key={o.title} className="flex flex-col gap-4 h-full">
               <Img src={o.img} alt={o.alt} ratio="4 / 5" position={o.position} sizes="(min-width: 768px) 33vw, 100vw" />
               <span className="text-[12px] tracking-[0.14em] uppercase text-earth">{o.brand}</span>
               <h3 className="font-display font-semibold text-[28px] tracking-[0.04em] uppercase leading-none">{o.title}</h3>
               <p className="text-[16px] leading-[1.6] text-stone">{o.text}</p>
-              <a href={o.href} className="font-semibold text-[15px]">{o.cta}</a>
+              <div className="mt-auto pt-4 border-t border-ink/15 flex items-center justify-between gap-4">
+                <span className="text-[15px] font-medium">{o.fact}</span>
+                <a href="#book" className="text-[14px] font-semibold underline underline-offset-4 hover:opacity-70">Request</a>
+              </div>
             </Reveal>
           ))}
         </div>
