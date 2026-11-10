@@ -15,7 +15,7 @@ export default function JournalIndex() {
         <div className="flex flex-col gap-5">
           <Eyebrow>Journal</Eyebrow>
           <h1 className="font-display font-medium uppercase leading-[0.95] text-[52px] md:text-[84px] max-w-[900px]">
-            Our home is Sintra. Our trips go further.
+            Trips we’ve guided
           </h1>
         </div>
         <div className="grid gap-12 md:grid-cols-2">

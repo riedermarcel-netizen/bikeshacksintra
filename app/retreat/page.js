@@ -119,12 +119,12 @@ export default function RetreatPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[1.2fr_0.8fr] items-center">
           <Reveal className="flex flex-col gap-6">
             <Eyebrow>The idea</Eyebrow>
-            <H2>A week that feels like living here</H2>
+            <H2>Small group, local trails</H2>
             <Body>
-              No hotel buffet, no bus tour. You stay close to the trails, ride the
-              Serra with a guide who lives on them, and spend the evenings at one
-              table with people who love the same thing. Riding better is part of
-              it. Slowing down is the rest.
+              You stay close to the trails and ride the Serra de Sintra with Marcel,
+              who knows them well. Groups are small, so the pace and the routes
+              follow the riders. Along the way you’ll pick up tips on technique, but
+              there’s no fixed programme to work through.
             </Body>
           </Reveal>
           <Img src="/images/v2/host.jpg" alt="Marcel smiling in the hills above Sintra at golden hour" ratio="4 / 5" position="35% center" className="max-w-[460px]" />
@@ -163,7 +163,7 @@ export default function RetreatPage() {
               </div>
             ))}
           </div>
-          <p className="text-[14px] text-[#6b645a]">The plan adapts to weather, group and energy. That is the point.</p>
+          <p className="text-[14px] text-[#6b645a]">The plan changes with the weather and the group.</p>
         </div>
       </section>
 
@@ -220,8 +220,8 @@ export default function RetreatPage() {
       <section className="bg-ink text-paper py-24 md:py-28">
         <div className="max-w-[820px] mx-auto px-6 md:px-10 flex flex-col gap-6 items-start">
           <Eyebrow light>Request</Eyebrow>
-          <H2>Every retreat starts with a conversation</H2>
-          <Body light>Tell us which month suits you and how you ride. We reply personally within a day, with no obligation.</Body>
+          <H2>Ask about dates</H2>
+          <Body light>Tell us which month suits you and how you ride. Marcel will get back to you personally within a day or two.</Body>
           <div className="flex flex-wrap gap-3.5">
             <ButtonLink href="/#book" variant="light">Request a place</ButtonLink>
             <ButtonLink href={whatsappLink} variant="outline" target="_blank" rel="noopener noreferrer">Write us on WhatsApp</ButtonLink>

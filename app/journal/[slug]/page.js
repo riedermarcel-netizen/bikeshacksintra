@@ -98,7 +98,7 @@ export default async function StoryPage({ params }) {
         </div>
         <div className="flex flex-col gap-3.5 max-w-[460px]">
           <span className="font-display font-medium text-[30px] uppercase leading-none">Ride with us</span>
-          <p className="text-[15px] text-stone">Bike Shack Alps for the mountains, Bike Shack Sintra for the coast.</p>
+          <p className="text-[15px] text-stone">Retreats in Sintra and guided trips in the Alps.</p>
           <div><ButtonLink href="/retreat">See the retreats</ButtonLink></div>
         </div>
       </section>

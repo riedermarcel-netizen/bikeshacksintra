@@ -34,8 +34,8 @@ export function WhereWeRide() {
             Roca and its lighthouse, high above the Atlantic.
           </Body>
           <Body light>
-            Our base is Colares, between the Serra and the coast, about 40 minutes
-            from Lisbon airport.
+            Most rides start in Colares, between the Serra and the coast, about 40
+            minutes from Lisbon airport.
           </Body>
         </Reveal>
         <Img
@@ -68,9 +68,9 @@ export function RetreatTeaser() {
           <Eyebrow>The retreat</Eyebrow>
           <H2>Sintra Retreat</H2>
           <Body>
-            A small group, a guide who lives here, and six nights in the
-            Sintra-Cascais Natural Park, between the forest and the sea. You ride
-            better along the way — but that’s not why you’ll remember it.
+            Six nights in the Sintra-Cascais Natural Park with a small group and a
+            local guide. We ride every day, adapt the trails to the group, and
+            look after accommodation, breakfast, transfers and three dinners.
           </Body>
           <dl className="grid grid-cols-2 gap-px bg-sand-line border border-sand-line">
             {facts.map(([k, v]) => (
@@ -117,8 +117,8 @@ export function Film() {
             <H2 className="md:text-[64px]">{film.title}</H2>
           </div>
           <Body light className="max-w-[480px]">
-            From the shade of the Serra to the cliffs at Cabo da Roca. Every trail
-            in it is one we ride with you.
+            Filmed on the trails around Sintra and the cliffs at Cabo da Roca —
+            the same places we ride on the retreat.
           </Body>
         </div>
         <div className="relative w-full bg-[#222]" style={{ aspectRatio: "16 / 9" }}>
@@ -203,7 +203,7 @@ export function JournalTeaser() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 flex flex-col gap-10">
         <div className="flex flex-col gap-4">
           <Eyebrow>Journal</Eyebrow>
-          <H2>Our home is Sintra. Our trips go further.</H2>
+          <H2>Trips we’ve guided</H2>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {stories.map((s) => (

@@ -81,12 +81,11 @@ export default function Book() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <p className="font-display text-[15px] tracking-[0.36em] uppercase text-earth mb-4">Request</p>
         <h2 className="font-display font-medium uppercase text-[40px] md:text-[56px] leading-[1.02] max-w-[760px]">
-          Every trip starts with a conversation
+          Send a request
         </h2>
         <p className="text-[17px] text-stone mt-5 max-w-[520px]">
-          Tell us what you&apos;re looking for — a retreat, a day ride, a gravel
-          trip or something for your group. Marcel replies personally, with no
-          obligation.
+          Tell us what you&apos;re interested in and when you&apos;d like to come.
+          Marcel will get back to you personally within a day or two.
         </p>
 
         <div className="mt-10 max-w-[520px] pt-5 border-t border-ink/15 text-[15px] text-stone flex flex-col gap-1.5">
@@ -271,7 +270,7 @@ export default function Book() {
                   id="improve"
                   name="day_goals"
                   type="text"
-                  placeholder="More confidence, better technique, new trails, or just a great ride..."
+                  placeholder="e.g. better cornering, new trails, a relaxed week"
                   className={fieldClass}
                 />
               </div>
