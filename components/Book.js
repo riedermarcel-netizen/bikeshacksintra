@@ -202,87 +202,79 @@ export default function Book() {
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="whatsapp" className={labelClass}>
-                  WhatsApp
+                  Phone / WhatsApp (optional)
                 </label>
-                <input id="whatsapp" name="whatsapp" type="tel" placeholder="Your WhatsApp number" className={fieldClass} />
+                <input id="whatsapp" name="phone" type="tel" placeholder="+49 …" className={fieldClass} />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="date" className={labelClass}>
-                    Preferred dates
+                  <label htmlFor="month" className={labelClass}>
+                    Preferred month
                   </label>
-                  <input id="date" name="preferred_date" type="date" className={fieldClass} />
+                  <select id="month" name="preferred_month" defaultValue="" className={fieldClass}>
+                    <option value="" disabled>Choose a month</option>
+                    {["March 2027", "April 2027", "May 2027", "June 2027", "September 2027", "October 2027", "I'm flexible"].map((m) => (
+                      <option key={m} value={m}>{m}</option>
+                    ))}
+                  </select>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="riders" className={labelClass}>
                     Number of riders
                   </label>
-                  <input id="riders" name="riders" type="number" min="1" placeholder="1" className={fieldClass} />
+                  <select id="riders" name="riders" defaultValue="1" className={fieldClass}>
+                    {["1", "2", "3", "4", "5", "6", "More than 6"].map((n) => (
+                      <option key={n} value={n}>{n}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="bikeType" className={labelClass}>
-                    Mountain bike or e-bike
+                  <label htmlFor="bike" className={labelClass}>
+                    Bike
                   </label>
-                  <select id="bikeType" name="bike_type" defaultValue="" className={fieldClass}>
+                  <select id="bike" name="bike" defaultValue="" className={fieldClass}>
                     <option value="" disabled>Choose one</option>
-                    <option value="Mountain bike">Mountain bike</option>
-                    <option value="E-bike">E-bike</option>
+                    <option value="Own mountain bike">I&apos;ll bring my mountain bike</option>
+                    <option value="Own e-bike">I&apos;ll bring my e-bike</option>
+                    <option value="Rental">I&apos;d like to rent one</option>
                   </select>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="bikeSource" className={labelClass}>
-                    Own bike or rental
+                  <label htmlFor="room" className={labelClass}>
+                    Room (retreat)
                   </label>
-                  <select id="bikeSource" name="bike_source" defaultValue="" className={fieldClass}>
-                    <option value="" disabled>Choose one</option>
-                    <option value="Bringing my own bike">Bringing my own bike</option>
-                    <option value="I need a rental">I need a rental</option>
+                  <select id="room" name="room" defaultValue="Double room" className={fieldClass}>
+                    <option value="Double room">Double room</option>
+                    <option value="Single room">Single room (supplement)</option>
+                    <option value="Not relevant">Not relevant</option>
                   </select>
-                  <span className="text-[12px] opacity-50 mt-1">
-                    No bike? Marcel can help arrange one through trusted
-                    local partners.
-                  </span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="experience" className={labelClass}>
-                  Riding experience
+                  How long have you been riding?
                 </label>
-                <input
-                  id="experience"
-                  name="riding_experience"
-                  type="text"
-                  placeholder="A little about how and how often you ride"
-                  className={fieldClass}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="improve" className={labelClass}>
-                  What are you hoping for?
-                </label>
-                <input
-                  id="improve"
-                  name="day_goals"
-                  type="text"
-                  placeholder="e.g. better cornering, new trails, a relaxed week"
-                  className={fieldClass}
-                />
+                <select id="experience" name="riding_experience" defaultValue="" className={fieldClass}>
+                  <option value="" disabled>Choose one</option>
+                  <option value="1–3 years">1–3 years</option>
+                  <option value="3–10 years">3–10 years</option>
+                  <option value="More than 10 years">More than 10 years</option>
+                </select>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="notes" className={labelClass}>
-                  Anything else Marcel should know?
+                  Message
                 </label>
                 <textarea
                   id="notes"
-                  name="notes"
-                  placeholder="Injuries, concerns, questions, or anything else"
+                  name="message"
+                  placeholder="Questions, travel plans, anything you'd like us to know"
                   rows={3}
                   className={`${fieldClass} resize-none`}
                 />
