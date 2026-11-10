@@ -3,17 +3,20 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Wordmark from "./Wordmark";
 
 const links = [
-  { href: "/#experience", label: "Experience" },
-  { href: "/#how", label: "How It Works" },
-  { href: "/#about", label: "Host" },
+  { href: "/retreat", label: "Retreats" },
+  { href: "/#film", label: "Film" },
+  { href: "/#ride", label: "Day rides & Gravel" },
+  { href: "/journal", label: "Journal" },
+  { href: "/#host", label: "Host" },
   { href: "/#book", label: "Request", accent: true },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const darkHero = pathname === "/" || pathname === "/retreat" || pathname.startsWith("/journal/");
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
@@ -41,25 +44,19 @@ export default function Header() {
   // Only the homepage opens on a dark full-bleed photo; every other page
   // has a light background from the first pixel, so the header must start
   // in its solid/light state there rather than the transparent-on-dark one.
-  const solid = scrolled || !isHome;
+  const solid = scrolled || !darkHero;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         solid
-          ? "bg-warm-white/95 backdrop-blur-sm border-b border-charcoal/10 py-5 text-charcoal"
+          ? "bg-ink/95 backdrop-blur-sm py-4 text-paper"
           : "py-7 text-warm-white"
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between">
-        <Link
-          href="/#top"
-          className={`font-serif leading-none origin-left transition-transform duration-[250ms] ${
-            solid ? "scale-[1.04]" : "scale-100"
-          }`}
-        >
-          <span className="block text-[18px] tracking-[0.06em] font-medium">BIKE SHACK</span>
-          <span className="block text-[9px] tracking-[0.34em] text-olive mt-1">SINTRA</span>
+        <Link href="/" aria-label="Bike Shack Sintra — home">
+          <Wordmark line="SINTRA" />
         </Link>
 
         <nav className="flex items-center">
@@ -76,7 +73,7 @@ export default function Header() {
 
           <ul
             inert={mobileMenuHidden}
-            className={`fixed md:static top-0 h-screen md:h-auto w-[78%] md:w-auto bg-warm-white md:bg-transparent flex flex-col md:flex-row justify-center md:justify-start items-start md:items-center gap-8 md:gap-11 px-10 md:px-0 transition-[right] duration-[400ms] text-charcoal md:text-inherit ${
+            className={`fixed md:static top-0 h-screen md:h-auto w-[78%] md:w-auto bg-ink md:bg-transparent flex flex-col md:flex-row justify-center md:justify-start items-start md:items-center gap-8 md:gap-8 px-10 md:px-0 transition-[right] duration-[400ms] text-paper md:text-inherit ${
               open ? "right-0" : "-right-full md:right-0"
             }`}
           >
@@ -85,10 +82,10 @@ export default function Header() {
                 <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className={`block py-2 md:py-0 text-[17px] md:text-[13.5px] tracking-wide uppercase transition-opacity ${
-                    l.accent && solid
-                      ? "text-olive opacity-100 hover:opacity-80"
-                      : "opacity-80 hover:opacity-100"
+                  className={`block py-2 md:py-0 text-[17px] md:text-[14px] transition-opacity ${
+                    l.accent
+                      ? "md:bg-paper md:text-ink md:px-5 md:py-3 font-medium hover:opacity-90"
+                      : "opacity-85 hover:opacity-100"
                   }`}
                 >
                   {l.label}

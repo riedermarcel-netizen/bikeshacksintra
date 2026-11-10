@@ -1,40 +1,44 @@
 import Link from "next/link";
+import Wordmark from "./Wordmark";
+import { brands, contact, film } from "@/lib/config";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-warm-white pt-20 pb-10">
+    <footer className="bg-ink text-paper pt-20 pb-10">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-12 border-b border-warm-white/10">
-          <Link href="/#top" className="font-serif leading-none">
-            <span className="block text-[18px] tracking-[0.06em] font-medium">
-              BIKE SHACK
-            </span>
-            <span className="block text-[9px] tracking-[0.34em] text-olive mt-1">
-              SINTRA
-            </span>
-          </Link>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 pb-12 border-b border-paper/10">
+          <div className="flex flex-col gap-5">
+            <Link href="/" aria-label="Bike Shack — home">
+              <Wordmark line={null} />
+            </Link>
+            <p className="font-display text-[12px] tracking-[0.28em] text-dim max-w-[520px] leading-[1.8]">
+              {brands.map((b) => b.toUpperCase()).join(" · ")}
+            </p>
+          </div>
 
-          <div className="flex gap-6 md:gap-8">
-            <Link href="/company" className="text-[12px] opacity-55 hover:opacity-90 transition-opacity">
-              Company
-            </Link>
-            <Link href="/privacy" className="text-[12px] opacity-55 hover:opacity-90 transition-opacity">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-[12px] opacity-55 hover:opacity-90 transition-opacity">
-              Terms
-            </Link>
+          <div className="flex flex-wrap gap-6 md:gap-8 text-[14px]">
+            <a href={`mailto:${contact.email}`} className="opacity-80 hover:opacity-100">
+              {contact.email}
+            </a>
+            <Link href="/journal" className="opacity-80 hover:opacity-100">Journal</Link>
+            <a href={`https://vimeo.com/${film.vimeoId}`} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100">
+              The film
+            </a>
           </div>
         </div>
 
-        <div className="pt-8 flex justify-between items-start text-[11px]">
-          <div>
-            <span className="block opacity-60">© 2026 Bike Shack, Sintra</span>
-            <span className="block text-[9px] opacity-50 mt-1.5">
-              Photography by Esther Jörgensen
+        <div className="pt-8 flex flex-col md:flex-row justify-between gap-4 text-[12px] text-dim">
+          <div className="flex flex-col gap-1.5">
+            <span>© 2026 Bike Shack · Sintra, Portugal</span>
+            <span className="opacity-80">
+              Photography: Esther Jørgensen, Manfred Stromberg, Eric Haufe · {film.credits}
             </span>
           </div>
-          <span className="opacity-60">Sintra, Portugal</span>
+          <div className="flex gap-6">
+            <Link href="/company" className="hover:text-paper">Company</Link>
+            <Link href="/privacy" className="hover:text-paper">Privacy</Link>
+            <Link href="/terms" className="hover:text-paper">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>

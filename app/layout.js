@@ -1,34 +1,30 @@
-import { Newsreader, Inter } from "next/font/google";
 import { MotionConfig } from "motion/react";
+import "@fontsource/barlow-condensed/400.css";
+import "@fontsource/barlow-condensed/500.css";
+import "@fontsource/barlow-condensed/600.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
-  subsets: ["latin"],
-  weight: "variable",
-  axes: ["opsz"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  display: "swap",
-});
-
 export const metadata = {
-  title: "Bike Shack — Sintra",
+  metadataBase: new URL("https://www.bikeshacksintra.com"),
+  title: "Mountain Bike Retreats in Sintra, Portugal | Bike Shack",
   description:
-    "Private mountain bike rides in Sintra, four to five hours, guided and coached around how you ride.",
+    "Six-night mountain bike retreats in Sintra, Portugal: forest trails in the Serra de Sintra, sunsets at the Cabo da Roca lighthouse, shared dinners. Plus guided day rides and gravel trips.",
+  openGraph: {
+    title: "Bike Shack Sintra — Mountain Bike Retreats",
+    description:
+      "From the forest to the end of the land. Mountain bike retreats and guided rides in Sintra, Portugal.",
+    images: ["/images/v2/retreat-cliffs.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${inter.variable}`}>
+    <html lang="en">
       <head>
         {/* The browser's own scroll restoration (history.scrollRestoration
             defaults to "auto") can re-apply an old scroll position from a
@@ -43,7 +39,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-warm-white text-charcoal font-sans antialiased">
+      <body className="bg-paper text-ink font-sans antialiased">
         <MotionConfig reducedMotion="user">
           <Header />
           {children}

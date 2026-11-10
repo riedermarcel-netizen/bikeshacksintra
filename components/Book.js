@@ -4,7 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import { contact, whatsappLink, booking } from "@/lib/config";
 
 const fieldClass =
-  "bg-transparent border-0 border-b border-charcoal/40 focus:border-charcoal outline-none text-[16px] font-light py-2 placeholder:text-charcoal/45";
+  "bg-transparent border-0 border-b border-ink/40 focus:border-ink outline-none text-[16px]  py-2 placeholder:text-charcoal/45";
 const labelClass = "text-[10px] tracking-[0.14em] uppercase opacity-55";
 
 // Reads ?payment=success|cancelled from the URL once Stripe redirects back.
@@ -77,33 +77,21 @@ export default function Book() {
   }
 
   return (
-    <section id="book" className="bg-warm-white text-charcoal py-32 md:py-44">
+    <section id="book" className="bg-paper text-ink py-24 md:py-32">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
-        <h2 className="font-serif text-[30px] md:text-[44px] leading-tight">
-          Let&apos;s plan your day.
+        <p className="font-display text-[15px] tracking-[0.36em] uppercase text-earth mb-4">Request</p>
+        <h2 className="font-display font-medium uppercase text-[40px] md:text-[56px] leading-[1.02] max-w-[760px]">
+          Every trip starts with a conversation
         </h2>
-        <p className="text-[17px] opacity-70 mt-5 max-w-[440px]">
-          Every ride starts with a conversation. Send a request and
-          together we&apos;ll find the day that works best for you.
-        </p>
-        <p className="text-[15px] opacity-55 mt-3 max-w-[440px]">
-          Not sure if it&apos;s right for you? Ask first: there&apos;s no
+        <p className="text-[17px] text-stone mt-5 max-w-[520px]">
+          Tell us what you&apos;re looking for — a retreat, a day ride, a gravel
+          trip or something for your group. Marcel replies personally, with no
           obligation.
         </p>
 
-        <div className="mt-10 max-w-[440px]">
-          <p className="font-serif italic text-[19px] opacity-90">
-            Private Ride — €250 per rider
-          </p>
-
-          <div className="mt-5 pt-5 border-t border-charcoal/15">
-            <p className="font-serif text-[16px] opacity-80">
-              Riding together? Two riders — €450 · Three riders — €600.
-            </p>
-            <p className="text-[13px] opacity-55 mt-3">
-              Still completely private. Never mixed with other guests.
-            </p>
-          </div>
+        <div className="mt-10 max-w-[520px] pt-5 border-t border-ink/15 text-[15px] text-stone flex flex-col gap-1.5">
+          <p><span className="font-semibold text-ink">Sintra Retreat</span> — 6 nights, €2,390 per rider</p>
+          <p><span className="font-semibold text-ink">Private day ride</span> — €250 per rider · two riders €450 · three riders €600</p>
         </div>
 
         {paymentResult === "cancelled" && (
@@ -122,7 +110,7 @@ export default function Book() {
             >
               <div>
                 <div className={labelClass}>Email</div>
-                <div className="font-serif text-[20px]">{contact.email}</div>
+                <div className="font-display text-[22px]">{contact.email}</div>
               </div>
               <span className="text-[18px] opacity-55 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all">
                 →
@@ -136,7 +124,7 @@ export default function Book() {
             >
               <div>
                 <div className={labelClass}>WhatsApp</div>
-                <div className="font-serif text-[20px]">Write us on WhatsApp</div>
+                <div className="font-display text-[22px]">Write us on WhatsApp</div>
               </div>
               <span className="text-[18px] opacity-55 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all">
                 →
@@ -188,6 +176,18 @@ export default function Book() {
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
               <div className="flex flex-col gap-2">
+                <label htmlFor="interest" className={labelClass}>
+                  I&apos;m interested in
+                </label>
+                <select id="interest" name="interest" defaultValue="Sintra Retreat" className={fieldClass}>
+                  <option value="Sintra Retreat">Sintra Retreat</option>
+                  <option value="Day ride in Sintra">Day ride in Sintra</option>
+                  <option value="Gravel Portugal">Gravel Portugal</option>
+                  <option value="Group / team">Group / team</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col gap-2">
                 <label htmlFor="name" className={labelClass}>
                   Name
                 </label>
@@ -211,7 +211,7 @@ export default function Book() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="date" className={labelClass}>
-                    Preferred date
+                    Preferred dates
                   </label>
                   <input id="date" name="preferred_date" type="date" className={fieldClass} />
                 </div>
@@ -265,7 +265,7 @@ export default function Book() {
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="improve" className={labelClass}>
-                  What would you like to get most out of your day?
+                  What are you hoping for?
                 </label>
                 <input
                   id="improve"
@@ -299,7 +299,7 @@ export default function Book() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="self-start text-[12px] tracking-[0.14em] uppercase border-b border-charcoal/40 hover:border-charcoal py-3 transition-colors disabled:opacity-50"
+                className="self-start bg-ink text-paper px-7 py-4 text-[15px] font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
               >
                 {status === "sending" ? "Sending..." : "Send request"}
               </button>
