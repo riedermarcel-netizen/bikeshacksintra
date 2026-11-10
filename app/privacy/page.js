@@ -40,7 +40,7 @@ export default function PrivacyPage() {
               you around the web.
             </p>
             <p className="text-[13px] opacity-50 mt-8">
-              Last updated 22 July 2026
+              Last updated 10 November 2026
             </p>
           </Reveal>
         </Container>
@@ -49,6 +49,16 @@ export default function PrivacyPage() {
       <section className="pb-32 md:pb-44">
         <Container>
           <Reveal className="max-w-[600px]">
+            <Section title="Who Is Responsible">
+              <p>
+                Bike Shack, Marcel Rieder, Mittagstr. 3, 87527 Sonthofen,
+                Germany ·{" "}
+                <a href={`mailto:${contact.email}`} className="underline decoration-charcoal/30 hover:decoration-charcoal">
+                  {contact.email}
+                </a>
+              </p>
+            </Section>
+
             <Section title="Contact Form">
               <p>
                 When you send a booking request, we receive your name,
@@ -58,10 +68,12 @@ export default function PrivacyPage() {
                 and get back to you.
               </p>
               <p>
-                <Placeholder>
-                  Placeholder – to be completed before launch: link to
-                  Formspree&apos;s own privacy policy.
-                </Placeholder>
+                Formspree is operated by Formspree, Inc. in the United
+                States. You can read how they handle data in{" "}
+                <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="underline decoration-charcoal/30 hover:decoration-charcoal">
+                  Formspree&apos;s privacy policy
+                </a>
+                .
               </p>
             </Section>
 
@@ -83,10 +95,20 @@ export default function PrivacyPage() {
 
             <Section title="Website Hosting">
               <p>
-                <Placeholder>
-                  Placeholder – to be completed before launch: name of
-                  hosting provider and where data is processed.
-                </Placeholder>
+                This website is hosted by Vercel Inc. (United States). When
+                you visit, Vercel processes technical data such as your IP
+                address and browser type so the site can be delivered
+                securely. Fonts are served from our own website, not from
+                Google.
+              </p>
+            </Section>
+
+            <Section title="Embedded Film">
+              <p>
+                Our film is hosted on Vimeo (Vimeo.com, Inc., United States)
+                and embedded with Vimeo&apos;s &quot;do not track&quot;
+                setting. When you play it, Vimeo receives technical data
+                such as your IP address under its own privacy policy.
               </p>
             </Section>
 
@@ -113,10 +135,9 @@ export default function PrivacyPage() {
                 case you&apos;d like to ride with us again.
               </p>
               <p>
-                <Placeholder>
-                  Placeholder – to be completed before launch: exact
-                  retention period.
-                </Placeholder>
+                Requests that don&apos;t lead to a booking are deleted after
+                12 months. Booking records are kept as long as German tax
+                law requires.
               </p>
             </Section>
 
