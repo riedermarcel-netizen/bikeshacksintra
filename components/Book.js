@@ -1,55 +1,14 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import { contact, whatsappLink, booking } from "@/lib/config";
 
 const fieldClass =
   "bg-transparent border-0 border-b border-ink/40 focus:border-ink outline-none text-[16px]  py-2 placeholder:text-charcoal/45";
 const labelClass = "text-[10px] tracking-[0.14em] uppercase opacity-55";
 
-// Reads ?payment=success|cancelled from the URL once Stripe redirects back.
-// useSyncExternalStore (rather than a state+effect pair) keeps the initial
-// server/client render in sync and avoids a hydration mismatch.
-function subscribeNoop() {
-  return () => {};
-}
-function getPaymentSnapshot() {
-  const payment = new URLSearchParams(window.location.search).get("payment");
-  return payment === "success" || payment === "cancelled" ? payment : null;
-}
-function getPaymentServerSnapshot() {
-  return null;
-}
-
 export default function Book() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
-  const [checkoutStatus, setCheckoutStatus] = useState("idle"); // idle | loading | error
-  const [checkoutError, setCheckoutError] = useState("");
-  const paymentResult = useSyncExternalStore(
-    subscribeNoop,
-    getPaymentSnapshot,
-    getPaymentServerSnapshot
-  );
-
-  async function handleCheckout() {
-    setCheckoutStatus("loading");
-    setCheckoutError("");
-
-    try {
-      const res = await fetch("/api/checkout", { method: "POST" });
-      const data = await res.json();
-
-      if (res.ok && data.url) {
-        window.location.href = data.url;
-      } else {
-        setCheckoutError(data.error || "That didn't work. Please try again.");
-        setCheckoutStatus("error");
-      }
-    } catch {
-      setCheckoutError("That didn't work. Please try again.");
-      setCheckoutStatus("error");
-    }
-  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -93,52 +52,16 @@ export default function Book() {
             <a href={`mailto:${contact.email}`} className="underline underline-offset-4 hover:opacity-80">{contact.email}</a>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">WhatsApp</a>
           </div>
-          {paymentResult === "cancelled" && (
-            <p className="text-[13px] text-dim max-w-[420px]">
-              Payment wasn&apos;t completed, but your request still stands.
-            </p>
-          )}
         </div>
 
         <div className="bg-paper text-ink p-6 md:p-10">
-          {paymentResult === "success" ? (
-            <div>
-              <p className="font-serif italic text-[20px] opacity-90">
-                Deposit received. Your day is secured, and Marcel will be
-                in touch to confirm the details.
+          {status === "sent" ? (
+            <div className="flex flex-col gap-4 py-6">
+              <p className="font-display font-medium uppercase text-[32px] leading-[1.05]">Thank you</p>
+              <p className="text-[17px] leading-[1.7] text-stone">
+                Your request has arrived. Marcel will read it himself and get
+                back to you within a day or two.
               </p>
-              <p className="text-[13px] opacity-55 mt-4">
-                A receipt has been sent to your email by Stripe.
-              </p>
-            </div>
-          ) : status === "sent" ? (
-            <div>
-              <p className="font-serif italic text-[20px] opacity-90">
-                Thank you. Marcel will read this himself and reply
-                personally: you&apos;re already one step closer to your day
-                in Sintra.
-              </p>
-
-              <div className="mt-10 pt-8 border-t border-charcoal/20">
-                <p className="text-[13px] opacity-55 mb-4 max-w-[360px]">
-                  Want to lock in your date now? A refundable deposit
-                  secures it, and Marcel will confirm everything else with
-                  you directly.
-                </p>
-                <button
-                  type="button"
-                  onClick={handleCheckout}
-                  disabled={checkoutStatus === "loading"}
-                  className="self-start text-[12px] tracking-[0.14em] uppercase border-b border-charcoal/40 hover:border-charcoal py-3 transition-colors disabled:opacity-50"
-                >
-                  {checkoutStatus === "loading"
-                    ? "Redirecting to secure checkout..."
-                    : "Pay deposit securely"}
-                </button>
-                {checkoutStatus === "error" && (
-                  <p className="text-[13px] text-forest mt-3">{checkoutError}</p>
-                )}
-              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -251,7 +174,7 @@ export default function Book() {
               </div>
 
               {status === "error" && (
-                <p className="text-[13px] text-forest">
+                <p className="text-[13px] text-earth">
                   That didn&apos;t send. Please try again, or message
                   Marcel directly on WhatsApp above.
                 </p>

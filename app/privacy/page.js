@@ -121,10 +121,7 @@ export default function PrivacyPage() {
 
             <Section title="Cookies">
               <p>
-                We don&apos;t set cookies of our own. If you choose to pay a
-                deposit, Stripe, who take care of that payment for us, may
-                set cookies needed to keep it secure, under their own
-                privacy policy.
+                We don&apos;t set cookies of our own.
               </p>
             </Section>
 
