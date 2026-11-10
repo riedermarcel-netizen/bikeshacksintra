@@ -16,6 +16,7 @@ export default function Book() {
 
     const form = e.target;
     const data = new FormData(form);
+    data.append("_subject", `Bike Shack request: ${data.get("interest") || "General"} — ${data.get("name") || ""}`);
 
     try {
       const res = await fetch(booking.formEndpoint, {
