@@ -9,6 +9,7 @@ import {
   JournalTeaser,
   Host,
 } from "@/components/home/Sections";
+import Partners from "@/components/home/Partners";
 import Book from "@/components/Book";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Offers />
       <JournalTeaser />
       <Host />
+      <Partners />
       <Book />
     </main>
   );

@@ -223,7 +223,7 @@ export function JournalTeaser() {
 
 export function Host() {
   return (
-    <section id="host" className="bg-sand py-24 md:py-28">
+    <section id="host" className="py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.9fr_1.1fr] items-center">
         <Img
           src="/images/v2/host.jpg"
