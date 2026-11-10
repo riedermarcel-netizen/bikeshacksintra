@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { contact, whatsappLink } from "@/lib/config";
 
 export const metadata = {
-  title: "Company — Bike Shack Sintra",
+  title: "Company — Bike Shack",
   description: "Business and contact information for Bike Shack Sintra.",
 };
 
@@ -28,7 +28,7 @@ export default function CompanyPage() {
               Company
             </div>
             <h1 className="font-serif text-[36px] md:text-[56px] leading-tight max-w-[720px]">
-              Bike Shack Sintra
+              Bike Shack
             </h1>
             <p className="text-[18px] opacity-85 max-w-[560px] mt-8">
               The details behind Bike Shack, kept simple and easy to find.
@@ -44,33 +44,20 @@ export default function CompanyPage() {
               Information
             </h2>
             <div className="mt-4 pb-1 border-b border-charcoal/10">
-              <Row label="Name" value="Bike Shack Sintra" />
+              <Row label="Business" value="Bike Shack" />
+              <Row label="Owner" value="Marcel Rieder" />
               <Row
                 label="Address"
                 value={
-                  <span className="italic opacity-55 text-[16px]">
-                    Placeholder – to be completed before launch.
+                  <span>
+                    Mittagstr. 3<br />
+                    87527 Sonthofen
                   </span>
                 }
               />
-              <Row label="Country" value="Portugal" />
-              <Row
-                label="NIF"
-                value={
-                  <span className="italic opacity-55 text-[16px]">
-                    Placeholder – to be completed before launch.
-                  </span>
-                }
-              />
+              <Row label="Country" value="Germany" />
               <Row label="Email" value={contact.email} />
-              <Row
-                label="Phone"
-                value={
-                  <span className="italic opacity-55 text-[16px]">
-                    Placeholder – to be completed before launch.
-                  </span>
-                }
-              />
+              <Row label="Phone" value="+49 175 3887321" />
             </div>
 
             <h2 className="font-serif text-[22px] md:text-[24px] mb-2 mt-16">
