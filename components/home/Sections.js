@@ -163,8 +163,8 @@ const offers = [
   },
   {
     brand: "Bike Shack Sintra · Bike Shack Alps",
-    title: "Groups & teams",
-    text: "Your own group, your own days. Friends, clubs and company offsites, on request.",
+    title: "Team events",
+    text: "A riding day or several for your company or club, with guiding, food and transfers organised. On request.",
     cta: "Ask us →",
     href: "#book",
     img: "/images/v2/groups.jpg",

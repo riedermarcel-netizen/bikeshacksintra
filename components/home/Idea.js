@@ -13,7 +13,7 @@ export default function Idea() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 flex flex-col gap-14">
         <Reveal>
           <H2 className="max-w-[820px]">
-            Six days on the trails of Sintra, in a group of up to six riders.
+            Six days on the trails of Sintra, in a group of up to seven riders.
           </H2>
         </Reveal>
         <div className="grid gap-10 md:grid-cols-3">

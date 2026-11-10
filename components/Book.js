@@ -182,7 +182,7 @@ export default function Book() {
                   <option value="Sintra Retreat">Sintra Retreat</option>
                   <option value="Day ride in Sintra">Day ride in Sintra</option>
                   <option value="Gravel Portugal">Gravel Portugal</option>
-                  <option value="Group / team">Group / team</option>
+                  <option value="Team event">Team event</option>
                 </select>
               </div>
 
@@ -224,7 +224,7 @@ export default function Book() {
                     Number of riders
                   </label>
                   <select id="riders" name="riders" defaultValue="1" className={fieldClass}>
-                    {["1", "2", "3", "4", "5", "6", "More than 6"].map((n) => (
+                    {["1", "2", "3", "4", "5", "6", "7", "More than 7"].map((n) => (
                       <option key={n} value={n}>{n}</option>
                     ))}
                   </select>
