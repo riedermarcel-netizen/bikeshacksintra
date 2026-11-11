@@ -74,11 +74,11 @@ export default function AboutPage() {
           <div className="grid gap-6 grid-cols-2">
             <figure>
               <Img src="/images/story/s4.jpg" alt="Young Marcel racing with number 342 at the Junior European Championships in Les Orres, France" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
-              <Caption>Junior European Championships, Les Orres. Trials, downhill, cross-country and cyclocross in one week. Number 342.</Caption>
+              <Caption>Junior European Championships in Les Orres, France.</Caption>
             </figure>
             <figure>
               <Img src="/images/story/s5.jpg" alt="Teenage Marcel riding over large rocks in a cross-country race" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
-              <Caption>Rock garden, early 2000s. The marshal believed in me.</Caption>
+              <Caption>Cross-country race, early 2000s.</Caption>
             </figure>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.8fr_1.2fr] items-center">
           <figure>
             <Img src="/images/story/s6.jpg" alt="Marcel and his sister Nadine in team kit with their bikes on a meadow" ratio="3 / 4" />
-            <Caption>Nadine and me, team kit era. She was faster uphill, I was faster down. We still argue about which counts more.</Caption>
+            <Caption>Nadine and me. She was faster uphill, I was faster downhill.</Caption>
           </figure>
           <Reveal className="flex flex-col gap-6">
             <Eyebrow>What stuck</Eyebrow>
