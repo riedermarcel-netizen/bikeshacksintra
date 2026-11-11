@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { contact } from "@/lib/config";
 
 export const metadata = {
-  title: "Privacy — Bike Shack Sintra",
+  title: "Privacy | Bike Shack Sintra",
   description: "How Bike Shack Sintra handles your information.",
 };
 

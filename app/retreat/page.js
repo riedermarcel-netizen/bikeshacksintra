@@ -29,8 +29,8 @@ const day = [
 const week = [
   ["Arrival", "I pick you up at Lisbon airport. Check in, settle in, dinner together."],
   ["First ride", "Bike set-up for everyone, then an easy loop to get to know the trails and each other."],
-  ["Riding days", "The heart of the week: the best trails of the Serra, paced to the group, with a sunset ride to the cliffs."],
-  ["A day off the bike", "Lisbon, the palaces of Sintra, or the off-roader out to the cliffs. Your legs will thank you."],
+  ["Riding days", "Most of the week: the best trails of the Serra, paced to the group, with a sunset ride to the cliffs."],
+  ["A day off the bike", "Lisbon, the palaces of Sintra, or the off-roader out to the cliffs. Your legs won’t complain."],
   ["Departure", "A last breakfast, then back to the airport. Usually a bit quieter than on the way in."],
 ];
 
@@ -48,15 +48,15 @@ const notIncluded = [
   "Flights to Lisbon",
   "Lunches and the other evenings out",
   "Drinks",
-  "Rental bike — available on request",
+  "Rental bike (available on request)",
   "Travel and health insurance",
-  "Single room — supplement on request",
+  "Single room supplement",
 ];
 
 const faq = [
-  ["Do I need my own bike?", "No. Bring yours, or ask us about a rental bike when you request your place."],
+  ["Do I need my own bike?", "No. Bring yours, or ask me about a rental bike when you request your place."],
   ["Can I come on an e-bike?", "Yes, e-bikes are welcome on the retreat."],
-  ["How fit do I need to be?", "You should be fine riding a few hours on singletrack. Not sure? Ask me — I’ll tell you honestly."],
+  ["How fit do I need to be?", "You should be fine riding a few hours on singletrack. Not sure? Ask me, I’ll tell you honestly."],
   ["Can I come alone?", "Of course. By the second dinner, nobody’s alone anymore."],
 ];
 
@@ -224,7 +224,7 @@ export default function RetreatPage() {
           <Body light>Tell me which month suits you and how you ride. I’ll get back to you myself, usually within a day or two.</Body>
           <div className="flex flex-wrap gap-3.5">
             <ButtonLink href="/#book" variant="light">Request a place</ButtonLink>
-            <ButtonLink href={whatsappLink} variant="outline" target="_blank" rel="noopener noreferrer">Write us on WhatsApp</ButtonLink>
+            <ButtonLink href={whatsappLink} variant="outline" target="_blank" rel="noopener noreferrer">Write me on WhatsApp</ButtonLink>
           </div>
         </div>
       </section>

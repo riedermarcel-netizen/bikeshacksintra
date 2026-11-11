@@ -4,8 +4,8 @@ import { Eyebrow } from "@/components/ui/Type";
 import { stories } from "@/lib/journal";
 
 export const metadata = {
-  title: "Journal — Mountain bike trips in the Alps and Portugal | Bike Shack",
-  description: "Stories from our guided mountain bike trips: Friuli, the Dolomites to Trieste, Monte Rosa — and Sintra.",
+  title: "Journal | Mountain bike trips in the Alps and Portugal | Bike Shack",
+  description: "Stories from our guided mountain bike trips: Friuli, the Dolomites to Trieste, Monte Rosa and Sintra.",
 };
 
 export default function JournalIndex() {

@@ -4,7 +4,7 @@ import { Eyebrow, H2, Body, ButtonLink } from "@/components/ui/Type";
 import { whatsappLink } from "@/lib/config";
 
 export const metadata = {
-  title: "Marcel’s story — Bike Shack Sintra",
+  title: "Marcel’s story | Bike Shack Sintra",
   description:
     "Riding since four, racing since six. How a kid practising wheelies ended up running a small mountain bike retreat in Sintra.",
 };
@@ -59,8 +59,8 @@ export default function AboutPage() {
             <Eyebrow>The racing years</Eyebrow>
             <H2>Numbers on the handlebar</H2>
             <Body>
-              I raced my first race at six and didn’t really stop for years —
-              cross-country, downhill, whatever had a start line. My sister Nadine
+              I raced my first race at six and didn’t stop for years.
+              Cross-country, downhill, trials, cyclocross, whatever had a start line. My sister Nadine
               took it further than me and raced professionally. I took it far
               enough to learn the important things: how to read a trail, how to
               fall properly, and that the rider who looks relaxed usually is the
@@ -96,12 +96,11 @@ export default function AboutPage() {
             <Body>
               Honestly, I don’t remember most of the results. What stuck was the
               rest: the people, the long drives, the meals after a hard day, and
-              the feeling that a trail asks nothing of you except to show up and
-              pay attention. Through a few harder years, that was the one thing
-              that always worked.
+              being outside all day on a bike. Through a few harder years, that was
+              the one thing that always worked.
             </Body>
             <Body>
-              That’s what I want to pass on. Not a training plan — a few good days
+              That’s what I want to pass on. Not a training plan. Just a few good days
               on a bike, with people you’d happily have dinner with.
             </Body>
           </Reveal>

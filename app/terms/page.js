@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { contact, whatsappLink } from "@/lib/config";
 
 export const metadata = {
-  title: "Terms — Bike Shack Sintra",
+  title: "Terms | Bike Shack Sintra",
   description: "Terms for booking a private ride with Bike Shack Sintra.",
 };
 

@@ -15,7 +15,7 @@ export const metadata = {
   description:
     "Six-night mountain bike retreats in Sintra, Portugal: forest trails in the Serra de Sintra, sunsets at the Cabo da Roca lighthouse, shared dinners. Plus guided day rides and gravel trips.",
   openGraph: {
-    title: "Bike Shack Sintra — Mountain Bike Retreats",
+    title: "Bike Shack Sintra | Mountain Bike Retreats",
     description:
       "From the forest to land’s end. Mountain bike retreats and guided rides in Sintra, Portugal.",
     images: ["/images/v2/retreat-cliffs.jpg"],

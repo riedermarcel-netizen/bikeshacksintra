@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const s = getStory(slug);
   if (!s) return {};
   return {
-    title: `${s.title} — ${s.place} | Bike Shack Journal`,
+    title: `${s.title}, ${s.place} | Bike Shack Journal`,
     description: s.intro,
     openGraph: { images: [s.hero] },
   };

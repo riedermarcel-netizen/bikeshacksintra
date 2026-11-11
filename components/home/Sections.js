@@ -28,10 +28,10 @@ export function WhereWeRide() {
           <Eyebrow light>Where we ride</Eyebrow>
           <H2>Sintra, from the forest to the lighthouse</H2>
           <Body light>
-            Sintra has two moods. Up in the Serra it’s granite, moss and old
-            eucalyptus, with a palace or a Moorish castle popping up between the
-            trees. Ride west and it turns into heath, wind and sea — until the
-            trail runs out at Cabo da Roca, because Europe does.
+            Up in the Serra it’s granite, moss and old eucalyptus, with a palace
+            or a Moorish castle between the trees. Ride west and it turns into
+            heath, wind and sea, until the trail stops at Cabo da Roca. Europe
+            stops there too.
           </Body>
           <Body light>
             Most rides start in Colares, between the Serra and the coast, about 40
@@ -70,8 +70,7 @@ export function RetreatTeaser() {
           <Body>
             Six nights in the Sintra-Cascais Natural Park, a small group, and me
             as your guide. I sort out the beds, breakfast, transfers and three
-            dinners. You ride, eat, and try not to fall in love with Portugal.
-            (Most people fail at that last part.)
+            dinners. You ride and eat. That’s about it.
           </Body>
           <dl className="grid grid-cols-2 gap-px bg-sand-line border border-sand-line">
             {facts.map(([k, v]) => (
@@ -148,7 +147,7 @@ const offers = [
   {
     brand: "Bike Shack Sintra",
     title: "Day rides in Sintra",
-    text: "A guided day on the trails of the Serra de Sintra. Bring your bike or rent one — I’ll bring the good routes.",
+    text: "A guided day on the trails of the Serra de Sintra. Bring your bike or rent one. I’ll bring the good routes.",
     fact: "From €250 per rider",
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",

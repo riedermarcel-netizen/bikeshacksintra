@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { contact, whatsappLink } from "@/lib/config";
 
 export const metadata = {
-  title: "Company — Bike Shack",
+  title: "Company | Bike Shack",
   description: "Business and contact information for Bike Shack Sintra.",
 };
 
@@ -81,7 +81,7 @@ export default function CompanyPage() {
                     rel="noopener noreferrer"
                     className="hover:opacity-70 transition-opacity"
                   >
-                    Write us on WhatsApp
+                    Write me on WhatsApp
                   </a>
                 }
               />
