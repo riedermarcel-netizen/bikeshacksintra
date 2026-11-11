@@ -2,9 +2,9 @@ import Reveal from "../Reveal";
 import { H2 } from "../ui/Type";
 
 const pillars = [
-  ["Trails", "Singletrack in the Serra de Sintra, picked to suit the group. Mostly forest and granite, with rides out to the coast."],
-  ["Food", "Breakfast together every morning and dinner on three evenings — often fresh pasta in the greenhouse or pizza in the village."],
-  ["Coast", "Sunset rides to Cabo da Roca, the westernmost point of mainland Europe. On some evenings we light a fire afterwards."],
+  ["Trails", "Singletrack in the Serra de Sintra, picked to suit the group. Mostly forest and granite. Walking a section is allowed — I’ve done it too."],
+  ["Food", "Breakfast together every morning, dinner on three evenings. Usually fresh pasta in the greenhouse or pizza in the village. Second helpings are encouraged."],
+  ["Coast", "Sunset rides to Cabo da Roca, the westernmost point of mainland Europe. Afterwards, sometimes a fire. Sometimes just bed."],
 ];
 
 export default function Idea() {
@@ -13,7 +13,7 @@ export default function Idea() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 flex flex-col gap-14">
         <Reveal>
           <H2 className="max-w-[820px]">
-            Six days on the trails of Sintra, in a group of up to seven riders.
+            Six days on the trails of Sintra. Up to seven riders, one guide who knows where the good lines are.
           </H2>
         </Reveal>
         <div className="grid gap-10 md:grid-cols-3">

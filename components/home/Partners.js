@@ -28,7 +28,7 @@ export default function Partners() {
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-4">
             <Eyebrow>Partners</Eyebrow>
-            <H2>Who we work with</H2>
+            <H2>Good people we ride with</H2>
           </div>
           <ul className="grid gap-px bg-sand-line border border-sand-line sm:grid-cols-2 md:grid-cols-4">
             {partners.map((p) => {

@@ -45,8 +45,9 @@ export default function Book() {
             Send a request
           </h2>
           <p className="text-[17px] leading-[1.7] text-mist max-w-[420px]">
-            Tell us what you&apos;re interested in and when you&apos;d like to
-            come. Marcel will get back to you personally within a day or two.
+            Tell me what you&apos;re interested in and when you&apos;d like to
+            come. I answer myself, usually within a day or two — unless I&apos;m
+            on a trail without signal, which happens.
           </p>
           <div className="flex flex-col gap-2 pt-4 text-[15px]">
             <span className="text-dim">Prefer to write directly?</span>
@@ -60,8 +61,8 @@ export default function Book() {
             <div className="flex flex-col gap-4 py-6">
               <p className="font-display font-medium uppercase text-[32px] leading-[1.05]">Thank you</p>
               <p className="text-[17px] leading-[1.7] text-stone">
-                Your request has arrived. Marcel will read it himself and get
-                back to you within a day or two.
+                Your request has arrived. I&apos;ll read it myself and get back
+                to you within a day or two.
               </p>
             </div>
           ) : (

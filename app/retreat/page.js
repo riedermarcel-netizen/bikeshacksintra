@@ -19,19 +19,19 @@ const facts = [
 ];
 
 const day = [
-  ["Morning", "Breakfast together", "A slow start at one table. Yoga for anyone who wants it."],
+  ["Morning", "Breakfast together", "A slow start at one table. Yoga for anyone who wants it, coffee for everyone."],
   ["Late morning", "On the trails", "Forest singletrack in the Serra de Sintra, chosen for the group and the day."],
-  ["Midday", "Lunch your way", "A picnic on the trail or a long lunch in a local restaurant."],
+  ["Midday", "Lunch your way", "A picnic on the trail or a long lunch in a local restaurant. Both take longer than planned."],
   ["Evening", "Sunset ride", "Out to the coast for the last light over the Atlantic."],
   ["Night", "Dinner", "Fresh pasta in the greenhouse, or out for pizza. Sometimes a fire."],
 ];
 
 const week = [
-  ["Arrival", "We pick you up at Lisbon airport. Check in, settle in, dinner together."],
+  ["Arrival", "I pick you up at Lisbon airport. Check in, settle in, dinner together."],
   ["First ride", "Bike set-up for everyone, then an easy loop to get to know the trails and each other."],
   ["Riding days", "The heart of the week: the best trails of the Serra, paced to the group, with a sunset ride to the cliffs."],
-  ["A day off the bike", "Lisbon or the palaces of Sintra — or the off-roader out to the cliffs. Your choice, your pace."],
-  ["Departure", "A last breakfast, then back to the airport."],
+  ["A day off the bike", "Lisbon, the palaces of Sintra, or the off-roader out to the cliffs. Your legs will thank you."],
+  ["Departure", "A last breakfast, then back to the airport. Usually a bit quieter than on the way in."],
 ];
 
 const included = [
@@ -56,8 +56,8 @@ const notIncluded = [
 const faq = [
   ["Do I need my own bike?", "No. Bring yours, or ask us about a rental bike when you request your place."],
   ["Can I come on an e-bike?", "Yes, e-bikes are welcome on the retreat."],
-  ["How fit do I need to be?", "You should be comfortable riding for a few hours on singletrack. We adapt the routes to the group."],
-  ["Can I come alone?", "Of course. The small group and the shared dinners make it easy to arrive on your own."],
+  ["How fit do I need to be?", "You should be fine riding a few hours on singletrack. Not sure? Ask me — I’ll tell you honestly."],
+  ["Can I come alone?", "Of course. By the second dinner, nobody’s alone anymore."],
 ];
 
 function List({ items }) {
@@ -93,8 +93,8 @@ export default function RetreatPage() {
             <h1 className="font-display font-medium uppercase leading-[0.95] text-[56px] md:text-[92px]">The Sintra Retreat</h1>
             <p className="text-[17px] md:text-[19px] leading-[1.6] text-mist max-w-[580px]">
               Six nights in Sintra with a small group. Forest trails, sunsets on the
-              cliffs, long breakfasts and dinners in the greenhouse. You ride, we
-              take care of everything else.
+              cliffs, long breakfasts and dinners in the greenhouse. You ride. I
+              take care of the rest.
             </p>
             <div className="flex flex-wrap gap-3.5">
               <ButtonLink href="/#book" variant="light">Request a place</ButtonLink>
@@ -121,10 +121,10 @@ export default function RetreatPage() {
             <Eyebrow>The idea</Eyebrow>
             <H2>Small group, local trails</H2>
             <Body>
-              You stay close to the trails and ride the Serra de Sintra with Marcel,
-              who knows them well. Groups are small, so the pace and the routes
-              follow the riders. Along the way you’ll pick up tips on technique, but
-              there’s no fixed programme to work through.
+              You stay close to the trails and ride the Serra de Sintra with me.
+              Groups are small, so the pace follows the riders and not the other way
+              round. You’ll probably pick up a few things about technique along the
+              way. There’s no test at the end.
             </Body>
           </Reveal>
           <Img src="/images/v2/host.jpg" alt="Marcel smiling in the hills above Sintra at golden hour" ratio="4 / 5" position="35% center" className="max-w-[460px]" />
@@ -180,9 +180,9 @@ export default function RetreatPage() {
           <div className="flex flex-col gap-5">
             <Eyebrow>Who it is for</Eyebrow>
             <Body>
-              Riders who have been on a mountain bike for a while and feel at home on
-              singletrack. You don’t need to be fast or fearless — just keen to ride,
-              open to a few tips and happy in a small group. E-bikes are welcome.
+              Riders who’ve been on a mountain bike for a while and feel at home on
+              singletrack. You don’t need to be fast or fearless. You do need to
+              like pizza. E-bikes are welcome.
             </Body>
           </div>
         </div>
@@ -221,7 +221,7 @@ export default function RetreatPage() {
         <div className="max-w-[820px] mx-auto px-6 md:px-10 flex flex-col gap-6 items-start">
           <Eyebrow light>Request</Eyebrow>
           <H2>Ask about dates</H2>
-          <Body light>Tell us which month suits you and how you ride. Marcel will get back to you personally within a day or two.</Body>
+          <Body light>Tell me which month suits you and how you ride. I’ll get back to you myself, usually within a day or two.</Body>
           <div className="flex flex-wrap gap-3.5">
             <ButtonLink href="/#book" variant="light">Request a place</ButtonLink>
             <ButtonLink href={whatsappLink} variant="outline" target="_blank" rel="noopener noreferrer">Write us on WhatsApp</ButtonLink>

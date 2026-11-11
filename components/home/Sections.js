@@ -28,10 +28,10 @@ export function WhereWeRide() {
           <Eyebrow light>Where we ride</Eyebrow>
           <H2>Sintra, from the forest to the lighthouse</H2>
           <Body light>
-            Mountain biking in Sintra starts in the Serra: granite, moss and old
-            eucalyptus around the palaces and the Moorish castle. Ride west and the
-            trees give way to heath, wind and sea, until the trail ends at Cabo da
-            Roca and its lighthouse, high above the Atlantic.
+            Sintra has two moods. Up in the Serra it’s granite, moss and old
+            eucalyptus, with a palace or a Moorish castle popping up between the
+            trees. Ride west and it turns into heath, wind and sea — until the
+            trail runs out at Cabo da Roca, because Europe does.
           </Body>
           <Body light>
             Most rides start in Colares, between the Serra and the coast, about 40
@@ -68,9 +68,10 @@ export function RetreatTeaser() {
           <Eyebrow>The retreat</Eyebrow>
           <H2>Sintra Retreat</H2>
           <Body>
-            Six nights in the Sintra-Cascais Natural Park with a small group and a
-            local guide. We ride every day, adapt the trails to the group, and
-            look after accommodation, breakfast, transfers and three dinners.
+            Six nights in the Sintra-Cascais Natural Park, a small group, and me
+            as your guide. I sort out the beds, breakfast, transfers and three
+            dinners. You ride, eat, and try not to fall in love with Portugal.
+            (Most people fail at that last part.)
           </Body>
           <dl className="grid grid-cols-2 gap-px bg-sand-line border border-sand-line">
             {facts.map(([k, v]) => (
@@ -117,8 +118,9 @@ export function Film() {
             <H2 className="md:text-[64px]">{film.title}</H2>
           </div>
           <Body light className="max-w-[480px]">
-            Filmed on the trails around Sintra and the cliffs at Cabo da Roca —
-            the same places we ride on the retreat.
+            James and Nicole followed me around the trails of Sintra and out to
+            the cliffs at Cabo da Roca. Same trails as on the retreat. The sunset
+            isn’t guaranteed, but it usually shows up.
           </Body>
         </div>
         <div className="relative w-full bg-[#222]" style={{ aspectRatio: "16 / 9" }}>
@@ -146,7 +148,7 @@ const offers = [
   {
     brand: "Bike Shack Sintra",
     title: "Day rides in Sintra",
-    text: "A guided day on the trails of the Serra de Sintra, for one rider or a small group.",
+    text: "A guided day on the trails of the Serra de Sintra. Bring your bike or rent one — I’ll bring the good routes.",
     fact: "From €250 per rider",
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",
@@ -154,7 +156,7 @@ const offers = [
   {
     brand: "Bike Shack Portugal",
     title: "Gravel Portugal",
-    text: "Gravel trips across Portugal, organised together with 808 Project.",
+    text: "Five to ten days across Portugal on gravel, organised with my friends at 808 Project. Quiet roads, long days, a lot of pastéis de nata.",
     fact: "5–10 days",
     img: "/images/v2/gravel-road.jpg",
     alt: "A rider on a long gravel road between green verges",
@@ -162,7 +164,7 @@ const offers = [
   {
     brand: "Bike Shack",
     title: "Team events",
-    text: "Riding days for companies and clubs, in Sintra or the Alps.",
+    text: "Riding days for companies and clubs, in Sintra or the Alps. Good for team spirit. Better than another workshop.",
     fact: "On request",
     img: "/images/v2/groups.jpg",
     alt: "Marcel leading a group of riders along a singletrack through a pine forest",
@@ -203,7 +205,8 @@ export function JournalTeaser() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 flex flex-col gap-10">
         <div className="flex flex-col gap-4">
           <Eyebrow>Journal</Eyebrow>
-          <H2>Trips we’ve guided</H2>
+          <H2>When I’m not in Sintra</H2>
+          <Body>I guide in the Alps with Ride Alpine Trails. Here’s what that looked like this year.</Body>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {stories.map((s) => (
@@ -236,10 +239,12 @@ export function Host() {
           <Eyebrow>Your host</Eyebrow>
           <H2>Marcel</H2>
           <Body>
-            Thirty-five years on a mountain bike, a guide in the Alps, and a home in
-            Colares with the trails at the door. He knows which line works when
-            it’s wet, where the light falls at seven, and when a group needs one
-            more descent or a long lunch instead.
+            That’s me. “Bike Shack” sounds like a team — mostly it’s me, with
+            help from a few good friends. I’ve been riding mountain bikes for 35
+            years, guide in the Alps, and live in Colares, close enough to the
+            trails that I have no excuse not to ride. I know which line works
+            when it’s wet, where the light is at seven, and when a group needs
+            one more descent — or a long lunch.
           </Body>
           <p className="font-display font-medium text-[30px] leading-[1.2] max-w-[560px]">
             “And somewhere along the way, you notice you’re riding better.”

@@ -40,9 +40,9 @@ export default function Hero() {
             From the forest to the end of the land.
           </h1>
           <p className="text-[17px] md:text-[19px] leading-[1.6] text-mist max-w-[560px]">
-            Six nights of mountain biking in Sintra, Portugal. Forest trails in the
-            Serra de Sintra by day, sunset at the Cabo da Roca lighthouse, a shared
-            table and a fire at night.
+            Six nights of mountain biking in Sintra, Portugal. Forest trails by
+            day, sunsets at the Cabo da Roca lighthouse, and slightly too much
+            pizza. Small group, no rush.
           </p>
           <div className="flex flex-wrap gap-3.5 pt-2">
             <ButtonLink href="/retreat" variant="light">Join a retreat</ButtonLink>
