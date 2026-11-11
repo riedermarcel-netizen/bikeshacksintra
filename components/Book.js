@@ -46,8 +46,7 @@ export default function Book() {
           </h2>
           <p className="text-[17px] leading-[1.7] text-mist max-w-[420px]">
             Tell me what you&apos;re interested in and when you&apos;d like to
-            come. I answer myself, usually within a day or two, unless I&apos;m
-            on a trail without signal, which happens.
+            come. I&apos;ll get back to you myself within a day or two.
           </p>
           <div className="flex flex-col gap-2 pt-4 text-[15px]">
             <span className="text-dim">Prefer to write directly?</span>
