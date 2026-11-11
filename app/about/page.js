@@ -6,7 +6,7 @@ import { whatsappLink } from "@/lib/config";
 export const metadata = {
   title: "Marcel’s story — Bike Shack Sintra",
   description:
-    "Riding since four, racing since six. How a family of bike people turned into a small mountain bike retreat in Sintra.",
+    "Riding since four, racing since six. How a kid practising wheelies ended up running a small mountain bike retreat in Sintra.",
 };
 
 function Caption({ children }) {
@@ -24,9 +24,14 @@ export default function AboutPage() {
               Riding since four. Racing since six.
             </h1>
             <Body>
-              I didn’t get into mountain biking. I was sort of born into it. My
-              family spent weekends on bikes and holidays in a camper van, and at
-              some point somebody put a helmet on me and that was that.
+              Nobody in my family rode bikes. I was the first one to get on one,
+              and I never really got off. I spent whole afternoons practising
+              wheelies, until our neighbour, who coached at the local bike club,
+              pulled me into the club and said I should try a race.
+            </Body>
+            <Body>
+              A few years later my sister started too. My parents never had
+              anything to do with bikes. They still drove us to every single race.
             </Body>
           </Reveal>
           <figure>
@@ -40,7 +45,7 @@ export default function AboutPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-6 md:grid-cols-[1.4fr_0.6fr] items-end">
           <figure>
             <Img src="/images/story/s3.jpg" alt="Marcel with his yellow Diamondback, his parents and his sister on a mountain road" ratio="4 / 3" sizes="(min-width: 768px) 60vw, 100vw" />
-            <Caption>A yellow Diamondback, a yellow rain jacket and a family that thought this was a normal holiday.</Caption>
+            <Caption>A yellow Diamondback, a yellow rain jacket and parents who didn’t ride but came along anyway.</Caption>
           </figure>
           <figure className="hidden md:block">
             <Img src="/images/story/s2.jpg" alt="Marcel and his sister with the yellow Diamondback" ratio="3 / 4" sizes="25vw" />
@@ -109,14 +114,14 @@ export default function AboutPage() {
             <Eyebrow>Today</Eyebrow>
             <H2>Sintra and a shack</H2>
             <Body>
-              These days I live in Colares with my partner Sophie, a few minutes
-              from the Serra de Sintra. I guide in the Alps with Ride Alpine Trails,
-              and in Sintra I host small groups on the trails I ride every week.
+              These days I split my time between the Allgäu and Sintra. I guide
+              in the Alps with Ride Alpine Trails, and in Sintra I host small
+              groups on trails I know by heart.
             </Body>
             <Body>
               Bike Shack is mostly me, plus a few good friends who step in when
-              the group gets bigger. And a partner who thinks a grown man making
-              a living on bikes is a perfectly normal plan.
+              the group gets bigger. And my partner Sophie, who thinks a grown man
+              making a living on bikes is a perfectly normal plan.
             </Body>
           </Reveal>
           <figure>

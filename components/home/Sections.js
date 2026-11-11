@@ -241,7 +241,7 @@ export function Host() {
           <Eyebrow>Your host</Eyebrow>
           <H2>Marcel</H2>
           <p className="font-display font-medium text-[30px] md:text-[36px] leading-[1.15]">
-            Started at five. Never really stopped.
+            Started at four. Never really stopped.
           </p>
           <Body>
             “Bike Shack” sounds like a team. Mostly it’s me, plus a few good
