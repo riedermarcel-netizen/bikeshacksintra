@@ -107,17 +107,16 @@ export default function AboutPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-2 items-center">
           <Reveal className="flex flex-col gap-6">
             <Eyebrow>Today</Eyebrow>
-            <H2>Sintra, Sophie and a shack</H2>
+            <H2>Sintra and a shack</H2>
             <Body>
               These days I live in Colares with my partner Sophie, a few minutes
               from the Serra de Sintra. I guide in the Alps with Ride Alpine Trails,
               and in Sintra I host small groups on the trails I ride every week.
             </Body>
             <Body>
-              Bike Shack is mostly me — but not only. Sophie supports all of it,
-              including the idea that a grown man can make a living riding bikes.
-              Without her there would be no retreat, no greenhouse dinners, and
-              probably no website either.
+              Bike Shack is mostly me, plus a few good friends who step in when
+              the group gets bigger. And a partner who thinks a grown man making
+              a living on bikes is a perfectly normal plan.
             </Body>
           </Reveal>
           <figure>
