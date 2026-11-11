@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="max-w-[760px] flex flex-col gap-6 md:gap-7">
           <Eyebrow light>Bike Shack Sintra · Mountain bike retreats</Eyebrow>
           <h1 className="font-display font-medium uppercase leading-[0.95] text-[52px] md:text-[88px]">
-            From the forest to the end of the land.
+            From the forest to land’s end.
           </h1>
           <p className="text-[17px] md:text-[19px] leading-[1.6] text-mist max-w-[560px]">
             Six nights of mountain biking in Sintra, Portugal. Forest trails by

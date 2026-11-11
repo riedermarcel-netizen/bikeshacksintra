@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "Bike Shack Sintra — Mountain Bike Retreats",
     description:
-      "From the forest to the end of the land. Mountain bike retreats and guided rides in Sintra, Portugal.",
+      "From the forest to land’s end. Mountain bike retreats and guided rides in Sintra, Portugal.",
     images: ["/images/v2/retreat-cliffs.jpg"],
   },
 };
