@@ -118,9 +118,9 @@ export function Film() {
             <H2 className="md:text-[64px]">{film.title}</H2>
           </div>
           <Body light className="max-w-[480px]">
-            James and Nicole followed me around the trails of Sintra and out to
-            the cliffs at Cabo da Roca. Same trails as on the retreat. The sunset
-            isn’t guaranteed, but it usually shows up.
+            A film by James and Nicole. From the forests of the Serra de Sintra
+            to the cliffs at Cabo da Roca, on the same trails we ride on the
+            retreat.
           </Body>
         </div>
         <div className="relative w-full bg-[#222]" style={{ aspectRatio: "16 / 9" }}>

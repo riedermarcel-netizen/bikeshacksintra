@@ -77,8 +77,8 @@ export default function AboutPage() {
               <Caption>Junior European Championships in Les Orres, France.</Caption>
             </figure>
             <figure>
-              <Img src="/images/story/s5.jpg" alt="Teenage Marcel riding over large rocks in a cross-country race" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
-              <Caption>Cross-country race, early 2000s.</Caption>
+              <Img src="/images/story/s5.jpg" alt="Teenage Marcel riding through a rock garden at the Junior European Championships" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
+              <Caption>Junior European Championships, early 2000s.</Caption>
             </figure>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.8fr_1.2fr] items-center">
           <figure>
             <Img src="/images/story/s6.jpg" alt="Marcel and his sister Nadine in team kit with their bikes on a meadow" ratio="3 / 4" />
-            <Caption>Nadine and me. She was faster uphill, I was faster downhill.</Caption>
+            <Caption>Nadine and me. She kept inspiring me, and in the end she’s the reason I started racing again.</Caption>
           </figure>
           <Reveal className="flex flex-col gap-6">
             <Eyebrow>What stuck</Eyebrow>
