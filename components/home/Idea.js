@@ -1,10 +1,27 @@
 import Reveal from "../Reveal";
+import Img from "../ui/Img";
 import { H2 } from "../ui/Type";
 
 const pillars = [
-  ["Trails", "Singletrack in the Serra de Sintra, picked to suit the group. Mostly forest and granite. Walking a section is allowed — I’ve done it too."],
-  ["Food", "Breakfast together every morning, dinner on three evenings. Usually fresh pasta in the greenhouse or pizza in the village. Second helpings are encouraged."],
-  ["Coast", "Sunset rides to Cabo da Roca, the westernmost point of mainland Europe. Afterwards, sometimes a fire. Sometimes just bed."],
+  {
+    t: "Trails",
+    d: "Forest, granite, the odd steep bit.",
+    src: "/images/v2/pillar-trails.jpg",
+    alt: "Marcel riding a forest singletrack in the Serra de Sintra",
+  },
+  {
+    t: "Food",
+    d: "Pizza in the village, pasta in the greenhouse. Seconds encouraged.",
+    src: "/images/v2/pillar-food.jpg",
+    alt: "Wood-fired pizza on the table in a warm restaurant",
+  },
+  {
+    t: "Coast",
+    d: "Cabo da Roca at sunset. Then bed, or a fire.",
+    src: "/images/v2/pillar-coast.jpg",
+    alt: "Marcel riding a coastal trail above the Atlantic at sunset",
+    position: "60% center",
+  },
 ];
 
 export default function Idea() {
@@ -16,11 +33,14 @@ export default function Idea() {
             Six days on the trails of Sintra. Up to seven riders, one guide who knows where the good lines are.
           </H2>
         </Reveal>
-        <div className="grid gap-10 md:grid-cols-3">
-          {pillars.map(([t, d]) => (
-            <Reveal key={t} className="border-t border-ink pt-5 flex flex-col gap-3">
-              <h3 className="font-display font-semibold text-[26px] tracking-[0.08em] uppercase">{t}</h3>
-              <p className="text-[16px] leading-[1.65] text-stone">{d}</p>
+        <div className="grid gap-8 md:grid-cols-3">
+          {pillars.map((p) => (
+            <Reveal key={p.t} className="flex flex-col gap-4">
+              <Img src={p.src} alt={p.alt} ratio="4 / 5" position={p.position} sizes="(min-width: 768px) 33vw, 100vw" />
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <h3 className="font-display font-semibold text-[24px] tracking-[0.08em] uppercase">{p.t}</h3>
+                <p className="text-[15px] text-stone">{p.d}</p>
+              </div>
             </Reveal>
           ))}
         </div>
