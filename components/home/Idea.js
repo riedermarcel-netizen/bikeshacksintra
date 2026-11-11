@@ -37,7 +37,7 @@ export default function Idea() {
           {pillars.map((p) => (
             <Reveal key={p.t} className="flex flex-col gap-4">
               <Img src={p.src} alt={p.alt} ratio="4 / 5" position={p.position} sizes="(min-width: 768px) 33vw, 100vw" />
-              <div className="flex items-baseline gap-3 flex-wrap">
+              <div className="flex flex-col gap-1.5">
                 <h3 className="font-display font-semibold text-[24px] tracking-[0.08em] uppercase">{p.t}</h3>
                 <p className="text-[15px] text-stone">{p.d}</p>
               </div>
