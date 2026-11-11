@@ -1,112 +1,142 @@
-import Link from "next/link";
-import Photo from "@/components/Photo";
-import Container from "@/components/Container";
+import Img from "@/components/ui/Img";
 import Reveal from "@/components/Reveal";
+import { Eyebrow, H2, Body, ButtonLink } from "@/components/ui/Type";
 import { whatsappLink } from "@/lib/config";
 
 export const metadata = {
-  title: "Marcel's Story — Bike Shack Sintra",
+  title: "Marcel’s story — Bike Shack Sintra",
   description:
-    "Riding since four, racing since six: how a lifetime on bikes shaped the way Marcel coaches in Sintra today.",
+    "Riding since four, racing since six. How a family of bike people turned into a small mountain bike retreat in Sintra.",
 };
+
+function Caption({ children }) {
+  return <p className="pt-3 text-[13px] text-[#6b645a]">{children}</p>;
+}
 
 export default function AboutPage() {
   return (
     <main>
-      <section className="pt-40 md:pt-52 pb-20 md:pb-28">
-        <Container>
-          <Reveal>
-            <div className="text-[11px] tracking-[0.22em] uppercase text-olive mb-6">
-              Marcel&apos;s Story
-            </div>
-            <h1 className="font-serif text-[36px] md:text-[56px] leading-tight max-w-[720px]">
-              Riding since four.
-              <br />
-              Racing since six.
+      <section className="pt-40 md:pt-48 pb-20 md:pb-24">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[1.2fr_0.8fr] items-end">
+          <Reveal className="flex flex-col gap-6">
+            <Eyebrow>Marcel’s story</Eyebrow>
+            <h1 className="font-display font-medium uppercase leading-[0.95] text-[52px] md:text-[84px]">
+              Riding since four. Racing since six.
             </h1>
-            <p className="text-[18px] md:text-[20px] opacity-85 max-w-[600px] mt-8">
-              Marcel grew up on a bike, not because someone signed him up
-              for a class, but because riding was simply what his family
-              did. He started at four, raced his first race at six. His
-              sister Nadine went on to spend years racing professionally.
-              Mountain biking has run through the Rieder family for
-              decades, long before it became a way to make a living.
-            </p>
+            <Body>
+              I didn’t get into mountain biking. I was sort of born into it. My
+              family spent weekends on bikes and holidays in a camper van, and at
+              some point somebody put a helmet on me and that was that.
+            </Body>
           </Reveal>
-        </Container>
+          <figure>
+            <Img src="/images/story/s1.jpg" alt="Marcel as a small boy on his first bike in front of the family camper van" ratio="3 / 4" />
+            <Caption>Day one, more or less. The haircut was not my decision.</Caption>
+          </figure>
+        </div>
       </section>
 
-      <section className="bg-sand py-32 md:py-44">
-        <Container className="grid md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-24 items-center">
-          <Photo
-            ratio="portrait"
-            src="/images/site/story-portrait.jpg"
-            alt="Marcel on the trail above Sintra"
-            sizes="(min-width: 768px) 42vw, 100vw"
-          />
-          <Reveal>
-            <p className="text-[18px] opacity-85 max-w-[440px] mb-4">
-              Since then he&apos;s ridden cross-country, downhill, enduro,
-              gravel and alpine trails, racing for years across various
-              mountain bike series, and coaching riders along the way.
-            </p>
-            <p className="text-[18px] opacity-85 max-w-[440px] mb-4">
-              But more than any result, riding taught him patience. The
-              kind of confidence that isn&apos;t loud, just steady. And
-              through some harder years, it gave him something constant to
-              hold on to: a place that never asked anything of him except
-              to show up and pay attention.
-            </p>
-            <p className="text-[18px] opacity-85 max-w-[440px]">
-              That&apos;s what he wants for the people he rides with, too:
-              not just better technique, though that comes, but a little
-              more trust in themselves, on the bike and off it.
-            </p>
-          </Reveal>
-        </Container>
+      <section className="pb-24 md:pb-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-6 md:grid-cols-[1.4fr_0.6fr] items-end">
+          <figure>
+            <Img src="/images/story/s3.jpg" alt="Marcel with his yellow Diamondback, his parents and his sister on a mountain road" ratio="4 / 3" sizes="(min-width: 768px) 60vw, 100vw" />
+            <Caption>A yellow Diamondback, a yellow rain jacket and a family that thought this was a normal holiday.</Caption>
+          </figure>
+          <figure className="hidden md:block">
+            <Img src="/images/story/s2.jpg" alt="Marcel and his sister with the yellow Diamondback" ratio="3 / 4" sizes="25vw" />
+          </figure>
+        </div>
       </section>
 
-      <section className="py-32 md:py-44">
-        <Container className="grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-24 items-center">
-          <Reveal className="md:order-1">
-            <p className="text-[18px] opacity-85 max-w-[440px]">
-              He still remembers what it felt like to be unsure on a trail.
-              That memory is why he pays attention to the small things
-              before anything else: how you sit, where you look, when you
-              brake.
-            </p>
+      <section className="bg-sand py-24 md:py-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-2 items-center">
+          <Reveal className="flex flex-col gap-6">
+            <Eyebrow>The racing years</Eyebrow>
+            <H2>Numbers on the handlebar</H2>
+            <Body>
+              I raced my first race at six and didn’t really stop for years —
+              cross-country, downhill, whatever had a start line. My sister Nadine
+              took it further than me and raced professionally. I took it far
+              enough to learn the important things: how to read a trail, how to
+              fall properly, and that the rider who looks relaxed usually is the
+              fast one.
+            </Body>
+            <Body>
+              Later came enduro, gravel and long alpine days. The bikes got better.
+              The fashion, thankfully, too.
+            </Body>
           </Reveal>
-          <Photo
-            ratio="portrait"
-            src="/images/site/story-adjustments.jpg"
-            alt="Marcel adjusting his bike before a ride"
-            className="md:order-2"
-            sizes="(min-width: 768px) 42vw, 100vw"
-          />
-        </Container>
+          <div className="grid gap-6 grid-cols-2">
+            <figure>
+              <Img src="/images/story/s4.jpg" alt="Young Marcel racing with number 342 at Les Orres in France" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
+              <Caption>Les Orres, France. Number 342. Matching gloves were a priority.</Caption>
+            </figure>
+            <figure>
+              <Img src="/images/story/s5.jpg" alt="Teenage Marcel riding over large rocks in a cross-country race" ratio="3 / 4" sizes="(min-width: 768px) 25vw, 50vw" />
+              <Caption>Rock garden, early 2000s. The marshal believed in me.</Caption>
+            </figure>
+          </div>
+        </div>
       </section>
 
-      <section className="bg-forest text-warm-white py-32 md:py-44">
-        <Container>
-          <Reveal className="text-center">
-            <div className="flex items-center justify-center gap-8 flex-wrap">
-              <Link
-                href="/#book"
-                className="bg-warm-white text-ink text-[12px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-sand transition-colors"
-              >
-                Request a private ride
-              </Link>
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[12px] tracking-[0.14em] uppercase opacity-70 hover:opacity-100 transition-opacity border-b border-warm-white/40 hover:border-warm-white py-3"
-              >
-                Ask on WhatsApp
-              </a>
-            </div>
+      <section className="py-24 md:py-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.8fr_1.2fr] items-center">
+          <figure>
+            <Img src="/images/story/s6.jpg" alt="Marcel and his sister Nadine in team kit with their bikes on a meadow" ratio="3 / 4" />
+            <Caption>Nadine and me, team kit era. She was faster. I’m allowed to say that now.</Caption>
+          </figure>
+          <Reveal className="flex flex-col gap-6">
+            <Eyebrow>What stuck</Eyebrow>
+            <H2>More than results</H2>
+            <Body>
+              Honestly, I don’t remember most of the results. What stuck was the
+              rest: the people, the long drives, the meals after a hard day, and
+              the feeling that a trail asks nothing of you except to show up and
+              pay attention. Through a few harder years, that was the one thing
+              that always worked.
+            </Body>
+            <Body>
+              That’s what I want to pass on. Not a training plan — a few good days
+              on a bike, with people you’d happily have dinner with.
+            </Body>
           </Reveal>
-        </Container>
+        </div>
+      </section>
+
+      <section className="bg-sand py-24 md:py-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-2 items-center">
+          <Reveal className="flex flex-col gap-6">
+            <Eyebrow>Today</Eyebrow>
+            <H2>Sintra, Sophie and a shack</H2>
+            <Body>
+              These days I live in Colares with my partner Sophie, a few minutes
+              from the Serra de Sintra. I guide in the Alps with Ride Alpine Trails,
+              and in Sintra I host small groups on the trails I ride every week.
+            </Body>
+            <Body>
+              Bike Shack is mostly me — but not only. Sophie supports all of it,
+              including the idea that a grown man can make a living riding bikes.
+              Without her there would be no retreat, no greenhouse dinners, and
+              probably no website either.
+            </Body>
+          </Reveal>
+          <figure>
+            <Img src="/images/v2/host.jpg" alt="Marcel smiling in the hills above Sintra at golden hour" ratio="4 / 5" position="35% center" />
+            <Caption>Still riding. Better bike, same grin.</Caption>
+          </figure>
+        </div>
+      </section>
+
+      <section className="bg-ink text-paper py-24 md:py-28">
+        <div className="max-w-[820px] mx-auto px-6 md:px-10 flex flex-col gap-6 items-start">
+          <Eyebrow light>Ride with me</Eyebrow>
+          <H2>Come to Sintra</H2>
+          <Body light>Six nights, a small group, good trails and long dinners. Or just a day on the bike.</Body>
+          <div className="flex flex-wrap gap-3.5">
+            <ButtonLink href="/retreat" variant="light">See the retreat</ButtonLink>
+            <ButtonLink href={whatsappLink} variant="outline" target="_blank" rel="noopener noreferrer">Write me on WhatsApp</ButtonLink>
+          </div>
+        </div>
       </section>
     </main>
   );

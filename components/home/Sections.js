@@ -240,7 +240,7 @@ export function Host() {
           <H2>Marcel</H2>
           <Body>
             That’s me. “Bike Shack” sounds like a team — mostly it’s me, with
-            help from a few good friends. I’ve been riding mountain bikes for 35
+            my partner Sophie backing all of it and a few good friends helping out. I’ve been riding mountain bikes for 35
             years, guide in the Alps, and live in Colares, close enough to the
             trails that I have no excuse not to ride. I know which line works
             when it’s wet, where the light is at seven, and when a group needs
