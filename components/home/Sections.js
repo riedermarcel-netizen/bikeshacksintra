@@ -227,27 +227,24 @@ export function JournalTeaser() {
 export function Host() {
   return (
     <section id="host" className="py-24 md:py-28">
-      <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[1.1fr_0.9fr] items-center">
-        <div className="grid grid-cols-2 gap-4 md:gap-6">
-          <figure className="flex flex-col gap-2">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-20 md:gap-14 md:grid-cols-[1.25fr_0.75fr] items-center">
+        <div className="relative pb-16 md:pb-12">
+          <Img
+            src="/images/v2/host.jpg"
+            alt="Marcel today, smiling in the hills above Sintra at golden hour"
+            ratio="3 / 2"
+            position="60% center"
+            sizes="(min-width: 768px) 60vw, 100vw"
+          />
+          <figure className="absolute left-3 md:-left-6 bottom-0 w-[38%] md:w-[30%] bg-white p-2 pb-3 md:p-3 md:pb-4 shadow-[0_12px_30px_rgba(0,0,0,0.25)] -rotate-[5deg]">
             <Img
               src="/images/story/s1.jpg"
-              alt="Marcel as a small boy on his first bike in front of the family camper van"
-              ratio="3 / 4"
-              position="40% 70%"
-              sizes="(min-width: 768px) 28vw, 50vw"
+              alt="Marcel as a small boy on his first bike"
+              ratio="1 / 1"
+              position="45% 72%"
+              sizes="(min-width: 768px) 18vw, 38vw"
             />
-            <figcaption className="font-display uppercase tracking-[0.2em] text-[13px] opacity-70">Then</figcaption>
-          </figure>
-          <figure className="flex flex-col gap-2">
-            <Img
-              src="/images/v2/host.jpg"
-              alt="Marcel today, smiling in the hills above Sintra at golden hour"
-              ratio="3 / 4"
-              position="78% center"
-              sizes="(min-width: 768px) 28vw, 50vw"
-            />
-            <figcaption className="font-display uppercase tracking-[0.2em] text-[13px] opacity-70">Now</figcaption>
+            <figcaption className="pt-2 md:pt-3 text-center font-display text-[13px] md:text-[15px] text-ink/70">Day one.</figcaption>
           </figure>
         </div>
         <Reveal className="flex flex-col gap-6">
