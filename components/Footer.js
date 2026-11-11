@@ -24,6 +24,9 @@ export default function Footer() {
             <a href={`https://vimeo.com/${film.vimeoId}`} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100">
               The film
             </a>
+            <a href={film.youtubeChannel} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100">
+              YouTube
+            </a>
           </div>
         </div>
 

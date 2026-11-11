@@ -137,6 +137,9 @@ export function Film() {
           <a href={`https://vimeo.com/${film.vimeoId}`} target="_blank" rel="noopener noreferrer" className="text-paper hover:underline">
             Watch on Vimeo →
           </a>
+          <a href={`https://youtu.be/${film.youtubeId}`} target="_blank" rel="noopener noreferrer" className="text-paper hover:underline">
+            Watch on YouTube →
+          </a>
         </p>
       </div>
     </section>
