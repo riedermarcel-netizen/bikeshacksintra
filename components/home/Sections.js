@@ -227,28 +227,39 @@ export function JournalTeaser() {
 export function Host() {
   return (
     <section id="host" className="py-24 md:py-28">
-      <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[0.9fr_1.1fr] items-center">
-        <Img
-          src="/images/v2/host.jpg"
-          alt="Marcel, your host, smiling in the hills above Sintra at golden hour"
-          ratio="4 / 5"
-          position="35% center"
-          className="max-w-[460px]"
-        />
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-14 md:grid-cols-[1.1fr_0.9fr] items-center">
+        <div className="grid grid-cols-2 gap-4 md:gap-6">
+          <figure className="flex flex-col gap-2">
+            <Img
+              src="/images/story/s1.jpg"
+              alt="Marcel as a small boy on his first bike in front of the family camper van"
+              ratio="3 / 4"
+              position="40% 70%"
+              sizes="(min-width: 768px) 28vw, 50vw"
+            />
+            <figcaption className="font-display uppercase tracking-[0.2em] text-[13px] opacity-70">Then</figcaption>
+          </figure>
+          <figure className="flex flex-col gap-2">
+            <Img
+              src="/images/v2/host.jpg"
+              alt="Marcel today, smiling in the hills above Sintra at golden hour"
+              ratio="3 / 4"
+              position="78% center"
+              sizes="(min-width: 768px) 28vw, 50vw"
+            />
+            <figcaption className="font-display uppercase tracking-[0.2em] text-[13px] opacity-70">Now</figcaption>
+          </figure>
+        </div>
         <Reveal className="flex flex-col gap-6">
           <Eyebrow>Your host</Eyebrow>
           <H2>Marcel</H2>
-          <Body>
-            That’s me. “Bike Shack” sounds like a team — mostly it’s me, with
-            my partner Sophie backing all of it and a few good friends helping out. I’ve been riding mountain bikes for 35
-            years, guide in the Alps, and live in Colares, close enough to the
-            trails that I have no excuse not to ride. I know which line works
-            when it’s wet, where the light is at seven, and when a group needs
-            one more descent — or a long lunch.
-          </Body>
-          <p className="font-display font-medium text-[30px] leading-[1.2] max-w-[560px]">
-            “And somewhere along the way, you notice you’re riding better.”
+          <p className="font-display font-medium text-[30px] md:text-[36px] leading-[1.15]">
+            Started at five. Never really stopped.
           </p>
+          <Body>
+            “Bike Shack” sounds like a team. Mostly it’s me, with Sophie backing
+            all of it and a few good friends helping out.
+          </Body>
           <Link href="/about" className="font-semibold text-[15px]">Read Marcel’s story →</Link>
         </Reveal>
       </div>
