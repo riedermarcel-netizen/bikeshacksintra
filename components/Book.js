@@ -8,7 +8,6 @@ const fieldClass =
 const interestOptions = [
   "Sintra Retreat",
   "Private week",
-  "Retreat rides only",
   "Day ride in Sintra",
   "Gravel Portugal",
   "Team event",

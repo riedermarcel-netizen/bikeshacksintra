@@ -6,18 +6,19 @@ import { retreat, rideOffers, whatsappLink } from "@/lib/config";
 export const metadata = {
   title: "Ride with us in Sintra | Guide days, private weeks & retreats | Bike Shack Sintra",
   description:
-    "Three ways to ride Sintra with a local guide: a guided day, a private week on your own dates, or the six-night retreat. Clear prices, no surprises.",
+    "Three ways to ride Sintra with a local guide: a trail day, a private week on your own dates, or the six-night retreat. Clear prices, no surprises.",
 };
 
 const offers = [
   {
-    key: "guide-day",
+    key: "trail-day",
     interest: "Day ride in Sintra",
     eyebrow: "One day",
-    title: "Guide Day",
-    text: "A day on the best trails of the Serra de Sintra. Good if you’re in Lisbon for a few days and want to ride properly.",
-    price: rideOffers.guideDay.price,
-    unit: rideOffers.guideDay.unit,
+    title: "Trail Day",
+    text: "One full day on the trails I’d show a friend. I pick the route for your level, you just ride.",
+    points: ["4 to 5 hours of riding", "Route chosen for you", "Shuttle when it helps", "Rental bike on request"],
+    price: rideOffers.trailDay.price,
+    unit: rideOffers.trailDay.unit,
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",
   },
@@ -26,21 +27,23 @@ const offers = [
     interest: "Private week",
     eyebrow: "Your dates",
     title: "Private Week",
-    text: "Just you, or you and your friends, with me as your guide. Your dates, your pace, as steep as you like. You sort your own place to stay.",
+    text: "Sintra on your own schedule. A different side of the Serra every day, at your pace, with me as your private guide.",
+    points: ["Any week of the year", "Planned around how you ride", "Shuttle and a sunset ride to the coast", "Stay wherever you like"],
     price: rideOffers.privateWeek.price,
     unit: rideOffers.privateWeek.unit,
     img: "/images/v2/coastal-trail.jpg",
     alt: "A rider on a sandy coastal trail near Sintra at golden hour",
-    highlight: "Good with family",
   },
   {
     key: "retreat",
     interest: "Sintra Retreat",
     eyebrow: "Everything included",
     title: "The Retreat",
-    text: "Six nights with a small group. Riding, breakfasts, dinners in the greenhouse, sunsets on the cliffs. You ride, I take care of the rest.",
+    text: "Six nights with a small group. Riding, long breakfasts, dinners in the greenhouse, sunsets on the cliffs.",
+    points: [`Up to ${retreat.maxRiders} riders`, "Accommodation and breakfast", "Three shared dinners", "Airport transfer from Lisbon"],
     price: retreat.price,
     unit: "per rider",
+    fixed: true,
     img: "/images/v2/retreat-cliffs.jpg",
     alt: "Marcel with his bike above the Atlantic cliffs near Cabo da Roca",
     position: "25% 25%",
@@ -50,22 +53,23 @@ const offers = [
 
 const rows = [
   ["Length", "1 day", rideOffers.privateWeek.days, `${retreat.nights} nights`],
-  ["Group", "You (and friends)", "You (and friends)", `Up to ${retreat.maxRiders} riders`],
-  ["Dates", "Your choice", "Your choice", "Fixed dates"],
+  ["Group", "Private", "Private", `Up to ${retreat.maxRiders} riders`],
+  ["Dates", "Your choice", "Your choice", "Spring and autumn"],
   ["Guiding", "✓", "✓", "✓"],
-  ["Shuttle", "When needed", "When needed", "✓"],
+  ["Shuttle", "When it helps", "✓", "✓"],
+  ["Sunset ride", "—", "✓", "✓"],
   ["Accommodation", "—", "Your own", "✓"],
   ["Breakfast & dinners", "—", "—", "✓"],
   ["Airport transfer", "—", "—", "✓"],
-  ["Price", `from ${rideOffers.guideDay.price}`, `from ${rideOffers.privateWeek.price}`, retreat.price],
+  ["Price", `from ${rideOffers.trailDay.price}`, `from ${rideOffers.privateWeek.price}`, retreat.price],
 ];
 
 const faq = [
-  ["Which one is right for me?", "Here for a day or two: Guide Day. Here for a week, on your own dates or with family: Private Week. Want the full experience with a group: the Retreat. Still not sure? Write me."],
-  ["I’m coming with my family. Does that work?", "Yes. Book a Private Week, or join the retreat rides only. I’m happy to share tips for places to stay, surf, beaches and the palaces."],
-  ["Should I bring my e-bike or my analog bike?", "Both work. Flying is easier with an analog bike, and 99% of the time I ride my analog bike here. Rental bikes are available on request."],
-  ["How good do I need to be?", "You should be at home on singletrack. For enduro riders, Sintra has steep and technical stuff. Tell me how you ride and I’ll plan around it."],
-  ["What about prices for groups?", "Prices are per rider. For two or more riders on a Guide Day or Private Week, ask me and I’ll make you an offer."],
+  ["Which one is right for me?", "Short on time: Trail Day. Want Sintra to yourself, on your own dates: Private Week. Want the riding, the food and the company: the Retreat. Still not sure? Write me."],
+  ["When is the best time to ride in Sintra?", "You can ride here all year. Spring and autumn are the best, winter is mild and green while the Alps are under snow, summer mornings are cool in the forest."],
+  ["Do I need my own bike?", "No. Bring yours, analog or e-bike, or ask me about a rental when you send your request."],
+  ["How good do I need to be?", "You should be at home on singletrack. The Serra has everything from flowing forest trails to steep, technical lines. Tell me how you ride and I’ll plan around it."],
+  ["What does it cost for one rider, or for a group?", `A Trail Day is ${rideOffers.trailDay.price} per rider from two riders, or ${rideOffers.trailDay.solo} if you ride alone with me. For a Private Week with friends, ask me and I’ll make you an offer.`],
 ];
 
 function OfferCard({ o }) {
@@ -73,18 +77,21 @@ function OfferCard({ o }) {
     <Reveal className="flex flex-col gap-4 h-full">
       <div className="relative">
         <Img src={o.img} alt={o.alt} ratio="4 / 5" position={o.position} sizes="(min-width: 768px) 33vw, 100vw" />
-        {o.highlight && (
-          <span className="absolute top-4 left-4 bg-paper text-ink text-[12px] tracking-[0.14em] uppercase px-3 py-1.5">
-            {o.highlight}
-          </span>
-        )}
       </div>
       <span className="text-[12px] tracking-[0.14em] uppercase text-earth">{o.eyebrow}</span>
       <h2 className="font-display font-semibold text-[32px] tracking-[0.04em] uppercase leading-none">{o.title}</h2>
       <p className="text-[16px] leading-[1.6] text-stone">{o.text}</p>
+      <ul className="flex flex-col gap-2">
+        {o.points.map((pt) => (
+          <li key={pt} className="relative pl-6 text-[15px] leading-[1.5] text-stone">
+            <span aria-hidden="true" className="absolute left-0">—</span>
+            {pt}
+          </li>
+        ))}
+      </ul>
       <div className="mt-auto pt-5 border-t border-ink/15 flex flex-col gap-4">
         <p className="flex items-baseline gap-2">
-          <span className="text-[13px] text-stone">from</span>
+          {!o.fixed && <span className="text-[13px] text-stone">from</span>}
           <span className="font-display font-semibold text-[34px] leading-none">{o.price}</span>
           <span className="text-[14px] text-stone">{o.unit}</span>
         </p>
@@ -109,8 +116,7 @@ export default function RidePage() {
           <Eyebrow>Ride with us · Sintra</Eyebrow>
           <h1 className="font-display font-medium uppercase leading-[0.95] text-[52px] md:text-[88px]">Three ways to ride</h1>
           <Body>
-            One day, your own week, or the full retreat. Same trails, same guide.
-            Pick what fits your trip.
+            A day, a week of your own, or the full retreat. Same trails, same guide.
           </Body>
         </div>
       </section>
@@ -161,29 +167,6 @@ export default function RidePage() {
       </section>
 
       <section className="py-24 md:py-28">
-        <div className="max-w-[1240px] mx-auto px-6 md:px-10 grid gap-10 md:grid-cols-[1fr_1fr] items-center">
-          <div className="flex flex-col gap-5">
-            <Eyebrow>Travelling with family?</Eyebrow>
-            <H2>Join the rides, stay on your own</H2>
-            <Body>
-              Ride with the retreat group on the riding days and spend the rest
-              of the time with your family. Guiding and shuttle included, place
-              to stay and meals up to you. Limited to one or two riders per retreat.
-            </Body>
-            <p className="flex items-baseline gap-2">
-              <span className="text-[13px] text-stone">from</span>
-              <span className="font-display font-semibold text-[30px] leading-none">{rideOffers.rideOnly.price}</span>
-              <span className="text-[14px] text-stone">{rideOffers.rideOnly.unit}</span>
-            </p>
-            <div>
-              <ButtonLink href={`/?interest=${encodeURIComponent("Retreat rides only")}#book`}>Ask about a spot</ButtonLink>
-            </div>
-          </div>
-          <Img src="/images/v2/lighthouse-cliffs.jpg" alt="The Cabo da Roca lighthouse above the Atlantic cliffs near Sintra at golden hour" ratio="4 / 3" />
-        </div>
-      </section>
-
-      <section className="pb-24 md:pb-28">
         <div className="max-w-[820px] mx-auto px-6 md:px-10 flex flex-col gap-7">
           <Eyebrow>Questions</Eyebrow>
           {faq.map(([q, a]) => (
