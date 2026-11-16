@@ -67,8 +67,8 @@ export default function TermsPage() {
 
             <Section title="Pricing">
               <p>
-                €250 per rider for your private ride. Riding together: two
-                riders €450, three riders €600. Always private, never mixed
+                €320 for your private ride, for one or two riders. Each
+                additional rider is €80. Always private, never mixed
                 with other guests.
               </p>
             </Section>

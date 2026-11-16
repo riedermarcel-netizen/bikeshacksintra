@@ -31,6 +31,7 @@ const offers = [
     points: ["Any week of the year", "Planned around how you ride", "Shuttle and a sunset ride to the coast", "Stay wherever you like"],
     price: rideOffers.privateWeek.price,
     unit: rideOffers.privateWeek.unit,
+    from: true,
     img: "/images/v2/coastal-trail.jpg",
     alt: "A rider on a sandy coastal trail near Sintra at golden hour",
   },
@@ -43,7 +44,6 @@ const offers = [
     points: [`Up to ${retreat.maxRiders} riders`, "Accommodation and breakfast", "Three shared dinners", "Airport transfer from Lisbon"],
     price: retreat.price,
     unit: "per rider",
-    fixed: true,
     img: "/images/v2/retreat-cliffs.jpg",
     alt: "Marcel with his bike above the Atlantic cliffs near Cabo da Roca",
     position: "25% 25%",
@@ -53,7 +53,7 @@ const offers = [
 
 const rows = [
   ["Length", "1 day", rideOffers.privateWeek.days, `${retreat.nights} nights`],
-  ["Group", "Private", "Private", `Up to ${retreat.maxRiders} riders`],
+  ["Group", "Private, 1–2 riders", "Private, 1–2 riders", `Up to ${retreat.maxRiders} riders`],
   ["Dates", "Your choice", "Your choice", "Spring and autumn"],
   ["Guiding", "✓", "✓", "✓"],
   ["Shuttle", "When it helps", "✓", "✓"],
@@ -61,7 +61,7 @@ const rows = [
   ["Accommodation", "—", "Your own", "✓"],
   ["Breakfast & dinners", "—", "—", "✓"],
   ["Airport transfer", "—", "—", "✓"],
-  ["Price", `from ${rideOffers.trailDay.price}`, `from ${rideOffers.privateWeek.price}`, retreat.price],
+  ["Price", `${rideOffers.trailDay.price} per group`, `from ${rideOffers.privateWeek.price} per group`, `${retreat.price} per rider`],
 ];
 
 const faq = [
@@ -69,7 +69,7 @@ const faq = [
   ["When is the best time to ride in Sintra?", "You can ride here all year. Spring and autumn are the best, winter is mild and green while the Alps are under snow, summer mornings are cool in the forest."],
   ["Do I need my own bike?", "No. Bring yours, analog or e-bike, or ask me about a rental when you send your request."],
   ["How good do I need to be?", "You should be at home on singletrack. The Serra has everything from flowing forest trails to steep, technical lines. Tell me how you ride and I’ll plan around it."],
-  ["What does it cost for one rider, or for a group?", `A Trail Day is ${rideOffers.trailDay.price} per rider from two riders, or ${rideOffers.trailDay.solo} if you ride alone with me. For a Private Week with friends, ask me and I’ll make you an offer.`],
+  ["What does it cost for a group?", `Trail Day and Private Week are private, so the price is for your group and not per rider. It covers one or two riders. On a Trail Day, each extra rider is ${rideOffers.trailDay.extraRider}. For a Private Week with more than two, ask me and I’ll make you an offer.`],
 ];
 
 function OfferCard({ o }) {
@@ -91,7 +91,7 @@ function OfferCard({ o }) {
       </ul>
       <div className="mt-auto pt-5 border-t border-ink/15 flex flex-col gap-4">
         <p className="flex items-baseline gap-2">
-          {!o.fixed && <span className="text-[13px] text-stone">from</span>}
+          {o.from && <span className="text-[13px] text-stone">from</span>}
           <span className="font-display font-semibold text-[34px] leading-none">{o.price}</span>
           <span className="text-[14px] text-stone">{o.unit}</span>
         </p>

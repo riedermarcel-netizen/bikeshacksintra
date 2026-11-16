@@ -3,7 +3,7 @@ import Link from "next/link";
 import Reveal from "../Reveal";
 import Img from "../ui/Img";
 import { Eyebrow, H2, Body, ButtonLink } from "../ui/Type";
-import { film, retreat } from "@/lib/config";
+import { film, retreat, rideOffers } from "@/lib/config";
 import { stories } from "@/lib/journal";
 
 export function ForestBand() {
@@ -151,7 +151,7 @@ const offers = [
     brand: "Bike Shack Sintra",
     title: "Day rides in Sintra",
     text: "A guided day on the trails of the Serra de Sintra. Bring your bike or rent one. I’ll bring the good routes.",
-    fact: "From €250 per rider",
+    fact: `${rideOffers.trailDay.price} ${rideOffers.trailDay.unit}`,
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",
   },
