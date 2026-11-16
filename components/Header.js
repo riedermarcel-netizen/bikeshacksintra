@@ -8,7 +8,7 @@ import Wordmark from "./Wordmark";
 const links = [
   { href: "/retreat", label: "Retreats" },
   { href: "/#film", label: "Film" },
-  { href: "/#ride", label: "Day rides & Gravel" },
+  { href: "/ride", label: "Ride with us" },
   { href: "/journal", label: "Journal" },
   { href: "/#host", label: "Host" },
   { href: "/#book", label: "Request", accent: true },

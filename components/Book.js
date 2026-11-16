@@ -1,14 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { contact, whatsappLink, booking } from "@/lib/config";
 
 const fieldClass =
   "bg-transparent border-0 border-b border-ink/40 focus:border-ink outline-none text-[16px]  py-2 placeholder:text-charcoal/45";
+const interestOptions = [
+  "Sintra Retreat",
+  "Private week",
+  "Retreat rides only",
+  "Day ride in Sintra",
+  "Gravel Portugal",
+  "Team event",
+];
 const labelClass = "text-[10px] tracking-[0.14em] uppercase opacity-55";
 
 export default function Book() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [interest, setInterest] = useState("Sintra Retreat");
+
+  // Offer cards link to /?interest=…#book so the right offer is preselected.
+  useEffect(() => {
+    const v = new URLSearchParams(window.location.search).get("interest");
+    if (v && interestOptions.includes(v)) setInterest(v);
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -71,11 +86,10 @@ export default function Book() {
                 <label htmlFor="interest" className={labelClass}>
                   I&apos;m interested in
                 </label>
-                <select id="interest" name="interest" defaultValue="Sintra Retreat" className={fieldClass}>
-                  <option value="Sintra Retreat">Sintra Retreat</option>
-                  <option value="Day ride in Sintra">Day ride in Sintra</option>
-                  <option value="Gravel Portugal">Gravel Portugal</option>
-                  <option value="Team event">Team event</option>
+                <select id="interest" name="interest" value={interest} onChange={(e) => setInterest(e.target.value)} className={fieldClass}>
+                  {interestOptions.map((o) => (
+                    <option key={o} value={o}>{o}</option>
+                  ))}
                 </select>
               </div>
 
