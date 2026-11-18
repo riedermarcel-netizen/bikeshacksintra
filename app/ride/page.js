@@ -1,7 +1,7 @@
 import Img from "@/components/ui/Img";
 import Reveal from "@/components/Reveal";
 import { Eyebrow, H2, Body, ButtonLink } from "@/components/ui/Type";
-import { retreat, rideOffers, whatsappLink } from "@/lib/config";
+import { retreat, rideOffers, whatsappLink, partners } from "@/lib/config";
 
 export const metadata = {
   title: "Ride with us in Sintra | Guide days, private weeks & retreats | Bike Shack Sintra",
@@ -74,6 +74,8 @@ const faq = [
   ["How does booking work?", "Send me a request and we agree on dates. A 30% deposit holds them, the rest is due 30 days before you arrive."],
 ];
 
+const gravelPartner = partners.find((p) => p.name === "808 Project");
+
 function OfferCard({ o }) {
   return (
     <Reveal className="flex flex-col gap-4 h-full">
@@ -138,6 +140,31 @@ export default function RidePage() {
           {offers.map((o) => (
             <OfferCard key={o.key} o={o} />
           ))}
+        </div>
+      </section>
+
+      <section className="pb-24 md:pb-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10">
+          <div className="border-t border-ink pt-12 grid gap-10 md:grid-cols-[1fr_1fr] items-center">
+            <Img src="/images/v2/gravel-road.jpg" alt="A rider on a long gravel road between green verges" ratio="3 / 2" sizes="(min-width: 768px) 50vw, 100vw" />
+            <div className="flex flex-col gap-5">
+              <Eyebrow>Bike Shack Portugal · Further afield</Eyebrow>
+              <h2 className="font-display font-semibold text-[32px] md:text-[40px] tracking-[0.04em] uppercase leading-none">Gravel Portugal</h2>
+              <Body>
+                Five to ten days across Portugal on gravel, organised together with
+                my friends at 808 Project. Quiet roads, long days, a lot of pastéis
+                de nata. Fixed dates, small group.
+              </Body>
+              <div className="flex flex-wrap items-center gap-5">
+                <ButtonLink href={`/?interest=${encodeURIComponent("Gravel Portugal")}#book`}>Ask about dates</ButtonLink>
+                {gravelPartner?.url && (
+                  <a href={gravelPartner.url} target="_blank" rel="noopener noreferrer" className="text-[14px] font-semibold underline underline-offset-4 hover:opacity-70">
+                    808 Project
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
