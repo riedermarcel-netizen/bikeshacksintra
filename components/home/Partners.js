@@ -1,29 +1,12 @@
 import { Eyebrow, H2 } from "../ui/Type";
-import { partners, testimonials } from "@/lib/config";
+import { partners } from "@/lib/config";
+import Testimonials from "../Testimonials";
 
 export default function Partners() {
   return (
     <section id="partners" className="bg-sand py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 flex flex-col gap-16">
-        {testimonials.length > 0 && (
-          <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-4">
-              <Eyebrow>Riders we&apos;ve guided</Eyebrow>
-              <H2>What guests say</H2>
-            </div>
-            <div className="grid gap-10 md:grid-cols-3">
-              {testimonials.map((t) => (
-                <figure key={t.name + t.trip} className="flex flex-col gap-4 border-t border-ink pt-5">
-                  <blockquote className="text-[18px] leading-[1.6]">“{t.quote}”</blockquote>
-                  <figcaption className="text-[14px] text-earth">
-                    {t.name}
-                    {t.trip ? ` · ${t.trip}` : ""}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        )}
+        <Testimonials />
 
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-4">

@@ -1,5 +1,6 @@
 import Img from "@/components/ui/Img";
 import Reveal from "@/components/Reveal";
+import Testimonials from "@/components/Testimonials";
 import { Eyebrow, H2, Body, ButtonLink } from "@/components/ui/Type";
 import { retreat, rideOffers, whatsappLink, partners } from "@/lib/config";
 
@@ -202,6 +203,12 @@ export default function RidePage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-24 md:pt-28">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10">
+          <Testimonials />
         </div>
       </section>
 
