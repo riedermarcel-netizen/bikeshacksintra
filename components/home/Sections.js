@@ -149,11 +149,21 @@ export function Film() {
 const offers = [
   {
     brand: "Bike Shack Sintra",
-    title: "Day rides in Sintra",
-    text: "A guided day on the trails of the Serra de Sintra. Bring your bike or rent one. I’ll bring the good routes.",
+    title: "Trail Day",
+    text: "One full day on the trails I’d show a friend. I pick the route for your level, you just ride.",
     fact: `${rideOffers.trailDay.price} ${rideOffers.trailDay.unit}`,
     img: "/images/v2/day-ride-wheelie.jpg",
     alt: "Marcel lifting the front wheel on a forest singletrack in Sintra",
+    href: "/ride",
+  },
+  {
+    brand: "Bike Shack Sintra",
+    title: "Private Week",
+    text: "Sintra on your own schedule. Five to seven days on the best trails of the Serra, just you and me.",
+    fact: `From ${rideOffers.privateWeek.price}`,
+    img: "/images/v2/coastal-trail.jpg",
+    alt: "A rider on a sandy coastal trail near Sintra at golden hour",
+    href: "/ride",
   },
   {
     brand: "Bike Shack Portugal",
@@ -162,15 +172,7 @@ const offers = [
     fact: "5–10 days",
     img: "/images/v2/gravel-road.jpg",
     alt: "A rider on a long gravel road between green verges",
-  },
-  {
-    brand: "Bike Shack",
-    title: "Team events",
-    text: "Riding days for companies and clubs, in Sintra or the Alps. Good for team spirit. Better than another workshop.",
-    fact: "On request",
-    img: "/images/v2/groups.jpg",
-    alt: "Marcel leading a group of riders along a singletrack through a pine forest",
-    position: "55% center",
+    href: "/ride",
   },
 ];
 
@@ -185,17 +187,23 @@ export function Offers() {
         <div className="grid gap-10 md:grid-cols-3">
           {offers.map((o) => (
             <Reveal key={o.title} className="flex flex-col gap-4 h-full">
-              <Img src={o.img} alt={o.alt} ratio="4 / 5" position={o.position} sizes="(min-width: 768px) 33vw, 100vw" />
+              <a href={o.href} className="block">
+                <Img src={o.img} alt={o.alt} ratio="4 / 5" position={o.position} sizes="(min-width: 768px) 33vw, 100vw" />
+              </a>
               <span className="text-[12px] tracking-[0.14em] uppercase text-earth">{o.brand}</span>
               <h3 className="font-display font-semibold text-[28px] tracking-[0.04em] uppercase leading-none">{o.title}</h3>
               <p className="text-[16px] leading-[1.6] text-stone">{o.text}</p>
               <div className="mt-auto pt-4 border-t border-ink/15 flex items-center justify-between gap-4">
                 <span className="text-[15px] font-medium">{o.fact}</span>
-                <a href="#book" className="text-[14px] font-semibold underline underline-offset-4 hover:opacity-70">Request</a>
+                <a href={o.href} className="text-[14px] font-semibold underline underline-offset-4 hover:opacity-70">Details & prices</a>
               </div>
             </Reveal>
           ))}
         </div>
+        <p className="text-[15px] text-stone">
+          Riding days for your team or club, in Sintra or the Alps?{" "}
+          <a href={`/?interest=${encodeURIComponent("Team event")}#book`} className="font-semibold text-ink underline underline-offset-4 hover:opacity-70">Ask me</a>.
+        </p>
       </div>
     </section>
   );
