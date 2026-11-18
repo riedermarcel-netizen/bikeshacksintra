@@ -28,7 +28,8 @@ const offers = [
     eyebrow: "Your dates",
     title: "Private Week",
     text: "Sintra on your own schedule. A different side of the Serra every day, at your pace, with me as your private guide.",
-    points: ["Any week of the year", "Planned around how you ride", "Shuttle and a sunset ride to the coast", "Stay wherever you like"],
+    points: ["5, 6 or 7 riding days, a rest day built in", "Planned around how you ride", "Shuttle and a sunset ride to the coast", "Airport pickup and drop-off in Lisbon", "Stay wherever you like, I’ll help you find a place"],
+    tiers: rideOffers.privateWeek.tiers,
     price: rideOffers.privateWeek.price,
     unit: rideOffers.privateWeek.unit,
     from: true,
@@ -56,20 +57,21 @@ const rows = [
   ["Group", "Private, 1–2 riders", "Private, 1–2 riders", `Up to ${retreat.maxRiders} riders`],
   ["Dates", "Your choice", "Your choice", "Spring and autumn"],
   ["Guiding", "✓", "✓", "✓"],
-  ["Shuttle", "When it helps", "✓", "✓"],
+  ["Shuttle", "When it helps", "When it helps", "✓"],
   ["Sunset ride", "—", "✓", "✓"],
   ["Accommodation", "—", "Your own", "✓"],
   ["Breakfast & dinners", "—", "—", "✓"],
-  ["Airport transfer", "—", "—", "✓"],
+  ["Airport transfer", "—", "✓", "✓"],
   ["Price", `${rideOffers.trailDay.price} per group`, `from ${rideOffers.privateWeek.price} per group`, `${retreat.price} per rider`],
 ];
 
 const faq = [
   ["Which one is right for me?", "Short on time: Trail Day. Want Sintra to yourself, on your own dates: Private Week. Want the riding, the food and the company: the Retreat. Still not sure? Write me."],
-  ["When is the best time to ride in Sintra?", "You can ride here all year. Spring and autumn are the best, winter is mild and green while the Alps are under snow, summer mornings are cool in the forest."],
-  ["Do I need my own bike?", "No. Bring yours, analog or e-bike, or ask me about a rental when you send your request."],
+  ["What’s the weather like?", "You can ride here all year. Spring and autumn are the best: around 17 to 22°C and green everywhere. It’s the Atlantic, so expect a shower now and then, especially in March. If a day is properly wet, we shift things around or ride something else."],
+  ["Should I bring my own bike?", "Yes, if you can. Your own bike always feels best. Flying is easier with an analog bike: e-bike batteries usually aren’t allowed on planes. Need a bike here? I can arrange a rental."],
   ["How good do I need to be?", "You should be at home on singletrack. The Serra has everything from flowing forest trails to steep, technical lines. Tell me how you ride and I’ll plan around it."],
   ["What does it cost for a group?", `Trail Day and Private Week are private, so the price is for your group and not per rider. It covers one or two riders. On a Trail Day, each extra rider is ${rideOffers.trailDay.extraRider}. For a Private Week with more than two, ask me and I’ll make you an offer.`],
+  ["How does booking work?", "Send me a request and we agree on dates. A 30% deposit holds them, the rest is due 30 days before you arrive."],
 ];
 
 function OfferCard({ o }) {
@@ -89,6 +91,16 @@ function OfferCard({ o }) {
           </li>
         ))}
       </ul>
+      {o.tiers && (
+        <dl className="grid grid-cols-3 border border-ink/15">
+          {o.tiers.map(([d, p]) => (
+            <div key={d} className="px-3 py-2.5 flex flex-col gap-0.5 border-r border-ink/15 last:border-r-0">
+              <dt className="text-[11px] tracking-[0.1em] uppercase text-earth">{d}</dt>
+              <dd className="text-[16px] font-semibold">{p}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
       <div className="mt-auto pt-5 border-t border-ink/15 flex flex-col gap-4">
         <p className="flex items-baseline gap-2">
           {o.from && <span className="text-[13px] text-stone">from</span>}

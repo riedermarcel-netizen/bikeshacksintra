@@ -75,9 +75,10 @@ export default function TermsPage() {
 
             <Section title="Payment">
               <p>
-                A deposit, paid securely online, holds your date. The
-                remaining balance is settled directly with Marcel on the
-                day.
+                A deposit, paid securely online, holds your date. For a
+                Trail Day, the remaining balance is settled directly with
+                Marcel on the day. For a Private Week, the deposit is 30%
+                and the remaining balance is due 30 days before arrival.
               </p>
             </Section>
 
